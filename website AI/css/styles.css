@@ -1,0 +1,119 @@
+/* Mike Kafe Ta — plain CSS, no framework. Brand: cream + espresso + latte gold. */
+:root{
+  --cream:#f6eedd; --cream2:#efe2c8; --card:#fffaf0;
+  --espresso:#2e1c11; --espresso2:#4a2f1d;
+  --gold:#c49a5b; --gold-d:#a37e43;
+  --ink:#241812; --muted:#7a6a5a;
+  --green:#2f6b3a; --teal:#14808b; --pink:#c22455; --purple:#6c2d8f; --red:#c33a22;
+  --radius:16px; --max:1100px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.6}
+body,h1,h2,h3{letter-spacing:.2px}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+.section{padding:64px 0}
+.section.alt{background:var(--cream2)}
+.center{text-align:center}
+.muted{color:var(--muted)}
+.eyebrow{text-transform:uppercase;letter-spacing:3px;font-size:12px;font-family:Arial,Helvetica,sans-serif;color:var(--gold-d);margin:0 0 6px}
+.eyebrow.light{color:var(--gold)}
+h1{font-size:clamp(48px,8vw,96px);line-height:.95;margin:8px 0}
+h1 span{background:var(--espresso);color:var(--cream);padding:0 18px;border-radius:12px;display:inline-block}
+h2{font-size:clamp(28px,4vw,42px);margin:0 0 12px}
+.script{font-style:italic;color:var(--espresso2);font-size:22px;margin:0}
+
+/* topbar + nav */
+.topbar{background:var(--espresso);color:var(--cream);font-family:Arial,sans-serif;font-size:13px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding:8px 12px}
+.topbar a{color:var(--gold);font-weight:bold}
+.dot{opacity:.5}
+.nav{position:sticky;top:0;z-index:50;background:rgba(246,238,221,.95);backdrop-filter:blur(6px);border-bottom:2px solid var(--espresso);display:flex;align-items:center;justify-content:space-between;padding:10px 20px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--espresso)}
+.brand svg{width:38px;height:38px}
+.brand-text{font-weight:900;letter-spacing:2px;line-height:1}
+.brand-text small{display:block;font-family:Arial;font-size:9px;letter-spacing:2px;color:var(--muted)}
+.links{display:flex;gap:16px;align-items:center;font-family:Arial;font-size:14px}
+.links a{text-decoration:none}
+.links a:hover{color:var(--gold-d)}
+.nav-toggle{display:none}
+.hamburger{display:none;font-size:26px;cursor:pointer}
+
+/* buttons */
+.btn{background:var(--espresso);color:var(--cream);padding:12px 22px;border-radius:999px;text-decoration:none;font-family:Arial;font-weight:bold;display:inline-block;border:2px solid var(--espresso)}
+.btn:hover{background:var(--espresso2)}
+.btn-outline{background:transparent;color:var(--espresso)}
+.btn-small{padding:8px 14px}
+
+/* hero */
+.hero{border-bottom:3px solid var(--espresso)}
+.hero-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;gap:24px;padding:32px 20px;align-items:center}
+.hours-pill{display:inline-block;background:var(--espresso);color:#fff;font-family:Arial;font-weight:bold;padding:8px 16px;border-radius:999px}
+.lede{font-size:18px;max-width:46ch}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0}
+.hero-meta{display:flex;gap:14px;font-family:Arial;font-size:13px;color:var(--espresso2);flex-wrap:wrap}
+.hero-media img{width:100%;border-radius:var(--radius);border:3px solid var(--espresso);box-shadow:8px 8px 0 var(--gold)}
+
+/* marquee */
+.marquee{background:var(--espresso);color:var(--cream);overflow:hidden;white-space:nowrap;padding:10px 0;font-family:Arial;letter-spacing:2px;font-size:13px}
+.marquee span{display:inline-block;animation:slide 22s linear infinite}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* about */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.framed{width:100%;border-radius:var(--radius);border:3px solid var(--espresso)}
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.mini-card{background:var(--card);border:2px solid var(--espresso);border-radius:12px;padding:10px;text-align:center;font-family:Arial;font-size:13px}
+.mini-card strong{display:block}
+
+/* best sellers + reviews */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.item,.grid3 blockquote{background:var(--card);border:2px solid var(--espresso);border-radius:var(--radius);padding:18px;margin:0}
+.badge{background:var(--gold);color:var(--espresso);font-family:Arial;font-size:11px;font-weight:bold;padding:4px 8px;border-radius:999px}
+.price{font-family:Arial;font-weight:bold;color:var(--espresso2)}
+.grid3 cite{display:block;margin-top:8px;color:var(--muted);font-size:14px}
+
+/* menu tabs (CSS only) */
+.tabs input{display:none}
+.tab-labels{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:18px 0;font-family:Arial}
+.tab-labels label{border:2px solid var(--espresso);border-radius:999px;padding:8px 14px;cursor:pointer;background:var(--card);font-size:14px}
+.tab-panel{display:none}
+#tab-coffee:checked~.tab-labels label[for=tab-coffee],#tab-special:checked~.tab-labels label[for=tab-special],#tab-matcha:checked~.tab-labels label[for=tab-matcha],#tab-frappe:checked~.tab-labels label[for=tab-frappe],#tab-soda:checked~.tab-labels label[for=tab-soda]{background:var(--espresso);color:var(--cream)}
+#tab-coffee:checked~.panel-coffee,#tab-special:checked~.panel-special,#tab-matcha:checked~.panel-matcha,#tab-frappe:checked~.panel-frappe,#tab-soda:checked~.panel-soda{display:block}
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.menu-card{background:var(--card);border:2px solid var(--espresso);border-radius:var(--radius);padding:18px}
+.menu-card h3{margin-top:0;border-bottom:2px dashed var(--gold);padding-bottom:8px}
+.menu-card h3 small{font-family:Arial;font-size:12px;color:var(--muted)}
+.menu-card ul{list-style:none;margin:0;padding:0;font-family:Arial}
+.menu-card li{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px dotted #d8c6a8}
+.menu-card.green{border-color:var(--green)} .menu-card.teal{border-color:var(--teal)}
+.menu-card.pink{border-color:var(--pink)} .menu-card.purple{border-color:var(--purple)}
+.menu-card.red{border-color:var(--red)}
+.poster-title{margin:36px 0 12px}
+.posters,.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.posters img,.gallery img{width:100%;border-radius:12px;border:2px solid var(--espresso);background:#fff}
+.gallery{grid-template-columns:repeat(3,1fr)}
+
+/* visit */
+.dark{background:var(--espresso);color:var(--cream)}
+.dark a{color:var(--gold)}
+.hours{font-family:Arial;border-collapse:collapse;margin:12px 0}
+.hours td{padding:6px 14px 6px 0}
+.map-placeholder{border:2px dashed var(--gold);border-radius:var(--radius);min-height:260px;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px}
+
+footer{background:#1e130c;color:var(--cream);text-align:center;padding:28px 16px;font-family:Arial;font-size:14px}
+footer .script{color:var(--gold);font-family:Georgia,serif}
+footer a{color:var(--gold)}
+
+/* responsive */
+@media(max-width:900px){
+  .hero-inner,.two-col,.menu-grid{grid-template-columns:1fr}
+  .grid4,.grid3,.posters,.gallery{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .grid4,.grid3,.posters,.gallery,.cards3{grid-template-columns:1fr}
+  .hamburger{display:block}
+  .links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--cream);flex-direction:column;padding:14px;border-bottom:2px solid var(--espresso)}
+  .nav-toggle:checked~.links{display:flex}
+}
