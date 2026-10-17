@@ -1,4 +1,3 @@
-/* --- Global Reset & Base Font --- */
 * {
     box-sizing: border-box;
 }
@@ -6,18 +5,23 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: "Lexend Exa", sans-serif; /* Fallback baseline font control rules */
+    font-family: "Lexend Exa", sans-serif;
 }
 
-/* --- Navbar Containers --- */
+/*
+=========================
+NAVIGATION BAR
+=========================
+*/
+/* --- Navigation bar --- */
 .navbar {
     background-color: #FEFFDE; 
     padding: 15px 40px;        
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.479); 
 }
-
 .navdiv {
     display: flex;
     align-items: center;
@@ -33,20 +37,17 @@ body {
     align-items: center;    
     gap: 15px;              
 }
-
 .logo-icon {
     height: 55px;           
     width: auto;            
     display: block;
 }
-
 .logo-text {
     display: flex;
     flex-direction: column; 
     align-items: center;    
     text-align: center;
 }
-
 .logo-title {
     font-family: "Lexend Exa", sans-serif;
     font-weight: 800;       
@@ -57,7 +58,6 @@ body {
     letter-spacing: 2px;    
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); 
 }
-
 .logo-subtitle {
     font-family: "Lexend Exa", sans-serif;
     font-weight: 900;       
@@ -70,7 +70,7 @@ body {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* --- Menu Links Layout --- */
+/* --- Nav Links Layout --- */
 .nav-menu {
     display: flex;
     align-items: center;
@@ -79,7 +79,6 @@ body {
     padding: 0;
     gap: 40px;
 }
-
 .nav-menu a {
     text-decoration: none;
     color: #361b0d;
@@ -88,7 +87,6 @@ body {
     font-weight: 300; /* Thin look variants */
     letter-spacing: 0.5px;
 }
-
 /* --- Order Now Button --- */
 .order-btn {
     background-color: #361b0d;
@@ -104,12 +102,10 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
     transition: all 0.2s ease;
 }
-
 .btn-symbol {
     font-size: 22px;
     line-height: 1;
 }
-
 .order-btn span {
     font-family: "Lexend Exa", sans-serif;
     font-size: 13px;
@@ -118,77 +114,75 @@ body {
     line-height: 1.2;          
     text-align: center;
 }
-/* ==========================================
-   HOME / HERO SECTION (FIXED SCREEN HEIGHT)
-   ========================================== */
+/*
+=====================
+HOMEPAGE
+=====================
+*/
 .homepage {
-    background-image: url(../assets/images/IMG_1181.JPG);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../assets/images/IMG_1181.JPG);
     width: 100%;
-    padding-right: 200px;
-    min-height: 100vh; 
+    min-height: 600px; 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     box-sizing: border-box;
+    padding-top: 40px; 
+    padding-left: 20px;
 }
-
-.hero-content {
+.home-hero-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px; 
 }
-
-.main-heading {
+.home-main-heading {
     font-family: "Lexend Exa", sans-serif;
     font-size: 85px;           
     color: #FEFFDE;            
     font-weight: 800;          
     letter-spacing: -1px;      
     margin: 0;
-    padding: 15px 40px;
+    padding: 15px 120px;
     text-shadow: 3px 5px 15px rgba(0, 0, 0, 0.55); 
     text-align: center;
 }
-
-/* Line 1: Plain Cream Text */
-.line-top {
+/* "WE ARE" */
+.home-line-top {
     font-family: "Lexend Exa", sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     font-size: 85px;
-    font-weight: 800;
-    color: #FEFFDE;            /* Smooth theme cream color */
+    font-weight: 400;
+    color: #FEFFDE;
     letter-spacing: -1px;
     line-height: 1;
+    text-shadow: 7px 7px 5px #00000062;
 }
-
-/* Line 2: Dark Brown Background Block Card */
-.line-bottom {
+/* "OPEN" */
+.home-line-bottom {
     font-family: "Lexend Exa", sans-serif;
     font-size: 85px;
-    font-weight: 800;
-    color: #FEFFDE;            /* Cream text color inside the box */
-    background-color: #361b0d; /* Plain dark brown container tint background */
-    letter-spacing: -1px;
+    font-weight: 400;
+    color: #FEFFDE;
+    background-color: #361b0d;
+    letter-spacing: -3px;
     line-height: 1;
-    
-    /* Interior sizing padding inside the brown block layout */
-    padding: 15px 40px;        
-    border-radius: 12px;       /* Adds subtle rounded corners to the box */
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25); /* Keeps presentation visible over the photo */
+    padding: 5px 40px;        
+    border-radius: 12px;
+    box-shadow: 7px 7px 5px #00000062;
 }
-
-.hours-sched {
+/* OPENS AT 10AM TO 2AM */
+.home-sched {
     background-color: #361b0d; 
     border-radius: 50px;       
-    padding: 14px 45px;        
+    padding: 15px 20px;        
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
-
-.hours-sched p {
+.home-sched p {
     font-family: "Lexend Exa", sans-serif;
     font-size: 18px;           
     font-weight: 500;
@@ -196,4 +190,88 @@ body {
     margin: 0;
     letter-spacing: 2px;       
     text-align: center;
+}
+
+/*
+=====================
+MENU
+=====================
+*/
+.menupage{
+    background-color: #402103;
+}
+
+
+/* Hide the radio controls */
+.menu-container input {
+    display: none;
+}
+
+/* Keep buttons at the top */
+.menu-nav {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.menu-nav label {
+    background: #fffde0;
+    color: #422306;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Highlight the selected button */
+#hot:checked ~ .menu-nav label[for="hot"],
+#iced:checked ~ .menu-nav label[for="iced"],
+#matcha:checked ~ .menu-nav label[for="matcha"] {
+    background: #b17a25;
+    color: #fffde0;
+}
+
+/* Outer window: hides the other sections */
+.menu-window {
+    width: 100%;
+    overflow: hidden;
+    border: 4px solid #88520d;
+    background: #422306;
+    color: #f2d2a0;
+    box-sizing: border-box;
+}
+
+/* Three panels arranged horizontally */
+.menu-track {
+    display: flex;
+    width: 300%;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Each panel takes up one window's width */
+.menu-section {
+    flex: 0 0 33.333333%;
+    box-sizing: border-box;
+    padding: 20px 40px;
+}
+
+.menu-section h2 {
+    text-align: center;
+    color: #b17a25;
+    font-size: 48px;
+    margin-top: 0;
+}
+
+/* Slide to the selected category */
+#hot:checked ~ .menu-window .menu-track {
+    transform: translateX(0);
+}
+
+#iced:checked ~ .menu-window .menu-track {
+    transform: translateX(-33.333333%);
+}
+
+#matcha:checked ~ .menu-window .menu-track {
+    transform: translateX(-66.666667%);
 }

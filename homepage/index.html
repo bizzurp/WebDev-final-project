@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Fonts link strictly for Lexend Exa -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com" rel="stylesheet">
+    <!-- FIX: Replace your old broken fonts link with this complete path -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Aguafina+Script&family=Angkor&family=Lexend+Exa:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <title>Mike Kafe Ta</title>
 </head>
@@ -38,18 +39,66 @@
       </ul>
     </div>
   </nav>
-
   <!-- HOME SECTION -->
   <div class="homepage">
-    <div class="hero-content">
-      <div class="main-heading">
-        <span class="line-top">WE ARE</span><br>
-        <span class="line-bottom">OPEN</span>
+    <div class="home-hero-content">
+      <div class="home-main-heading">
+        <span class="home-line-top">WE ARE</span><br>
+        <span class="home-line-bottom">OPEN</span>
       </div>
-      <div class="sched">
+      <div class="home-sched">
         <p>10:00 AM - 2:00 AM EVERYDAY</p>
       </div>
     </div>
   </div>
+  <!-- MENU SECTION -->
+   <div class="menupage">
+    <h1>MENU</h1>
+    <h1>PAGE</h1>
+    
+<div class="menu-container">
+
+    <!-- Hidden radio controls -->
+    <input type="radio" name="menu" id="hot" checked>
+    <input type="radio" name="menu" id="iced">
+    <input type="radio" name="menu" id="matcha">
+
+    <!-- Navigation buttons -->
+    <nav class="menu-nav">
+        <label for="hot">Hot Coffee</label>
+        <label for="iced">Iced Coffee</label>
+        <label for="matcha">Matcha</label>
+    </nav>
+
+    <!-- Sliding menu window -->
+    <div class="menu-window">
+        <div class="menu-track">
+
+            <section class="menu-section">
+                <h2>Hot Coffee</h2>
+                <p>Americano ................ ₱119</p>
+                <p>Latte .................... ₱119</p>
+                <p>Cappuccino ............... ₱119</p>
+            </section>
+
+            <section class="menu-section">
+                <h2>Iced Coffee</h2>
+                <p>Iced Americano ........... ₱119</p>
+                <p>Iced Latte ............... ₱129</p>
+                <p>Iced Mocha ............... ₱139</p>
+            </section>
+
+            <section class="menu-section">
+                <h2>Matcha</h2>
+                <p>Matcha Latte ............. ₱139</p>
+                <p>Iced Matcha .............. ₱149</p>
+            </section>
+
+        </div>
+    </div>
+
+</div>
+
+   </div>
 </body>
 </html>
