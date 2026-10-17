@@ -1,0 +1,199 @@
+/* --- Global Reset & Base Font --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lexend Exa", sans-serif; /* Fallback baseline font control rules */
+}
+
+/* --- Navbar Containers --- */
+.navbar {
+    background-color: #FEFFDE; 
+    padding: 15px 40px;        
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    max-width: 1400px;              
+    margin: 0 auto;
+}
+
+/* --- Logo Styling --- */
+.logo a {
+    text-decoration: none;  
+    display: flex;          
+    align-items: center;    
+    gap: 15px;              
+}
+
+.logo-icon {
+    height: 55px;           
+    width: auto;            
+    display: block;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    text-align: center;
+}
+
+.logo-title {
+    font-family: "Lexend Exa", sans-serif;
+    font-weight: 800;       
+    font-size: 26px;        
+    color: #000000;         
+    margin: 0;              
+    padding: 0;
+    letter-spacing: 2px;    
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); 
+}
+
+.logo-subtitle {
+    font-family: "Lexend Exa", sans-serif;
+    font-weight: 900;       
+    font-size: 8.5px;       
+    color: #000000;
+    margin: 4px 0 0 0;      
+    padding: 0;
+    letter-spacing: 1px;    
+    text-transform: uppercase;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Menu Links Layout --- */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 40px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #361b0d;
+    font-family: "Lexend Exa", sans-serif;
+    font-size: 16px;
+    font-weight: 300; /* Thin look variants */
+    letter-spacing: 0.5px;
+}
+
+/* --- Order Now Button --- */
+.order-btn {
+    background-color: #361b0d;
+    color: #FEFFDE !important;
+    text-decoration: none;
+    border: none;
+    border-radius: 16px;
+    padding: 10px 24px;      
+    display: inline-flex;
+    align-items: center;       
+    gap: 14px;                 
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+    transition: all 0.2s ease;
+}
+
+.btn-symbol {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.order-btn span {
+    font-family: "Lexend Exa", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.2;          
+    text-align: center;
+}
+/* ==========================================
+   HOME / HERO SECTION (FIXED SCREEN HEIGHT)
+   ========================================== */
+.homepage {
+    background-image: url(../assets/images/IMG_1181.JPG);
+    width: 100%;
+    padding-right: 200px;
+    min-height: 100vh; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; 
+}
+
+.main-heading {
+    font-family: "Lexend Exa", sans-serif;
+    font-size: 85px;           
+    color: #FEFFDE;            
+    font-weight: 800;          
+    letter-spacing: -1px;      
+    margin: 0;
+    padding: 15px 40px;
+    text-shadow: 3px 5px 15px rgba(0, 0, 0, 0.55); 
+    text-align: center;
+}
+
+/* Line 1: Plain Cream Text */
+.line-top {
+    font-family: "Lexend Exa", sans-serif;
+    font-size: 85px;
+    font-weight: 800;
+    color: #FEFFDE;            /* Smooth theme cream color */
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+/* Line 2: Dark Brown Background Block Card */
+.line-bottom {
+    font-family: "Lexend Exa", sans-serif;
+    font-size: 85px;
+    font-weight: 800;
+    color: #FEFFDE;            /* Cream text color inside the box */
+    background-color: #361b0d; /* Plain dark brown container tint background */
+    letter-spacing: -1px;
+    line-height: 1;
+    
+    /* Interior sizing padding inside the brown block layout */
+    padding: 15px 40px;        
+    border-radius: 12px;       /* Adds subtle rounded corners to the box */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25); /* Keeps presentation visible over the photo */
+}
+
+.hours-sched {
+    background-color: #361b0d; 
+    border-radius: 50px;       
+    padding: 14px 45px;        
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.hours-sched p {
+    font-family: "Lexend Exa", sans-serif;
+    font-size: 18px;           
+    font-weight: 500;
+    color: #FEFFDE;            
+    margin: 0;
+    letter-spacing: 2px;       
+    text-align: center;
+}
