@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google Fonts link strictly for Lexend Exa -->
-    <!-- FIX: Replace your old broken fonts link with this complete path -->
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Aguafina+Script&family=Angkor&family=Lexend+Exa:wght@100..900&display=swap" rel="stylesheet">
@@ -25,7 +23,7 @@
       </div>
 
       <ul class="nav-menu">
-        <li><a href="#">menu</a></li>
+        <li><a href="#menu-page">menu</a></li>
         <li><a href="#">best</a></li>
         <li><a href="#">visit</a></li>
         <li><a href="#">gallery</a></li>
@@ -52,53 +50,118 @@
     </div>
   </div>
   <!-- MENU SECTION -->
-   <div class="menupage">
-    <h1>MENU</h1>
-    <h1>PAGE</h1>
-    
-<div class="menu-container">
-
-    <!-- Hidden radio controls -->
-    <input type="radio" name="menu" id="hot" checked>
-    <input type="radio" name="menu" id="iced">
-    <input type="radio" name="menu" id="matcha">
-
-    <!-- Navigation buttons -->
-    <nav class="menu-nav">
+  <div class="menupage" id="menu-page">
+    <div class="menutitle">
+      <h1>MENU</h1>
+      <h1>DRINKS</h1>
+    </div>
+    <div class="menu-container">
+      <!-- Hidden radio controls -->
+       <input type="radio" name="menu" id="hot" checked>
+       <input type="radio" name="menu" id="iced">
+       <input type="radio" name="menu" id="specialty">
+       <input type="radio" name="menu" id="frappe">
+       <input type="radio" name="menu" id="fruitysoda">
+       <input type="radio" name="menu" id="sparklingtea">
+       <input type="radio" name="menu" id="matcha">
+       <input type="radio" name="menu" id="seasalt">
+       <input type="radio" name="menu" id="frappuccino">
+       <!-- Navigation buttons -->
+        <nav class="menu-nav">
         <label for="hot">Hot Coffee</label>
         <label for="iced">Iced Coffee</label>
+        <label for="specialty">Specialty</label>
+        <label for="frappe">Frappe</label>
+        <label for="fruitysoda">Fruity Soda</label>
+        <label for="sparklingtea">Sparkling Tea</label>
         <label for="matcha">Matcha</label>
-    </nav>
-
+        <label for="seasalt">Sea Salt</label>
+        <label for="frappuccino">Frappuccino</label>
+        
+      </nav>
     <!-- Sliding menu window -->
     <div class="menu-window">
         <div class="menu-track">
-
             <section class="menu-section">
                 <h2>Hot Coffee</h2>
-                <p>Americano ................ ₱119</p>
-                <p>Latte .................... ₱119</p>
-                <p>Cappuccino ............... ₱119</p>
+                <p>Americano ... ₱119</p>
+                <p>Latte ... ₱119</p>
+                <p>Cappuccino ... ₱119</p>
+                <p>Caramel Macchiato ... ₱119</p>
+                <p>Spanish Latte ... ₱119</p>
             </section>
 
             <section class="menu-section">
                 <h2>Iced Coffee</h2>
-                <p>Iced Americano ........... ₱119</p>
-                <p>Iced Latte ............... ₱129</p>
-                <p>Iced Mocha ............... ₱139</p>
+                <p>Americano ... ₱129</p>
+                <p>Latte ... ₱129</p>
+                <p>Hazelnut Latte ... ₱129</p>
+                <p>Spanish Latte ... ₱129</p>
+                <p>Caramel Latte ... ₱129</p>
+                <p>Caramel Macchiato... ₱129</p>
+            </section>
+
+            <section class="menu-section">
+                <h2>Specialty</h2>
+                <p>Biscoff Latte ... ₱139</p>
+                <p>Brown Sugar Latte ... ₱139</p>
+                <p>Brown Sugar Biscoff Latte ... ₱139</p>
+                <p>Sea Salt Latte ... ₱139</p>
+            </section>
+
+            <section class="menu-section">
+              <h2>Frappe</h2>
+              <p>Oreo Frappe ... ₱139</p>
+              <p>White Chocolate Strawberry Frappe ... ₱139</p>
+              <p>Triple Chocolate Frappe ... ₱139</p>
+              <p>Caramel Popcorn Frappe ... ₱139</p>
+              <p>Matcha Toffee Frappe ... ₱139</p>
+              <p>Green Tea Matcha Frappe ... ₱139</p>
+              <p>Biscoff Frappe ... ₱139</p>
+            </section>
+
+            <section class="menu-section">
+                <h2>Fruity Soda</h2>
+                <p>Strawberry Soda ... ₱99</p>
+                <p>Blueberry Soda ... ₱99</p>
+                <p>Mango Soda ... ₱99</p>
+                <p>Lemon Soda ... ₱99</p>
+            </section>
+
+            <section class="menu-section">
+                <h2>Sparkling Tea</h2>
+                <p>Biscoff Latte ... ₱139</p>
+                <p>Brown Sugar Latte ... ₱139</p>
+                <p>Brown Sugar Biscoff Latte ... ₱139</p>
+                <p>Sea Salt Latte ... ₱139</p>
             </section>
 
             <section class="menu-section">
                 <h2>Matcha</h2>
-                <p>Matcha Latte ............. ₱139</p>
-                <p>Iced Matcha .............. ₱149</p>
+                <p>Biscoff Latte ... ₱139</p>
+                <p>Brown Sugar Latte ... ₱139</p>
+                <p>Brown Sugar Biscoff Latte ... ₱139</p>
+                <p>Sea Salt Latte ... ₱139</p>
             </section>
 
+            <section class="menu-section">
+                <h2>Sea Salt</h2>
+                <p>Biscoff Latte ... ₱139</p>
+                <p>Brown Sugar Latte ... ₱139</p>
+                <p>Brown Sugar Biscoff Latte ... ₱139</p>
+                <p>Sea Salt Latte ... ₱139</p>
+            </section>
+
+            <section class="menu-section">
+                <h2>Frappuccino</h2>
+                <p>Biscoff Latte ... ₱139</p>
+                <p>Brown Sugar Latte ... ₱139</p>
+                <p>Brown Sugar Biscoff Latte ... ₱139</p>
+                <p>Sea Salt Latte ... ₱139</p>
+            </section>
         </div>
     </div>
-
+  </div>
 </div>
-
-   </div>
 </body>
 </html>

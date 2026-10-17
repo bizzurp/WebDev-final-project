@@ -122,7 +122,7 @@ HOMEPAGE
 .homepage {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../assets/images/IMG_1181.JPG);
     width: 100%;
-    min-height: 600px; 
+    height: 100vh; 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -197,10 +197,47 @@ HOMEPAGE
 MENU
 =====================
 */
-.menupage{
-    background-color: #402103;
+
+.menupage {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../assets/images/IMG_1199.JPG);
+    
+    /* FIX: Treat this section exactly like the homepage screen boundary */
+    width: 100%;
+    min-height: 800px; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    background-color: #402203c4;
+    padding: 60px 4% 50px;
+    box-sizing: border-box;
 }
 
+/* Center the menu title */
+.menutitle {
+    text-align: center;
+    color: #FEFFDE;
+    margin-bottom: 30px;
+}
+
+.menutitle h1 {
+    margin: 0;
+    line-height: 0.9;
+}
+
+/* First line */
+.menutitle h1:first-child {
+    font-family: "Abhaya Libre", serif;
+    font-size: 64px;
+    font-weight: 800;
+}
+
+/* Second line */
+.menutitle h1:last-child {
+    font-family: "Aguafina Script", cursive;
+    font-size: 58px;
+    font-weight: 400;
+}
 
 /* Hide the radio controls */
 .menu-container input {
@@ -227,7 +264,14 @@ MENU
 /* Highlight the selected button */
 #hot:checked ~ .menu-nav label[for="hot"],
 #iced:checked ~ .menu-nav label[for="iced"],
-#matcha:checked ~ .menu-nav label[for="matcha"] {
+#specialty:checked ~ .menu-nav label[for="specialty"],
+#frappe:checked ~ .menu-nav label[for="frappe"],
+#fruitysoda:checked ~ .menu-nav label[for="fruitysoda"],
+#sparklingtea:checked ~ .menu-nav label[for="sparklingtea"],
+#matcha:checked ~ .menu-nav label[for="matcha"],
+#seasalt:checked ~ .menu-nav label[for="seasalt"],
+#frappuccino:checked ~ .menu-nav label[for="frappuccino"]
+{
     background: #b17a25;
     color: #fffde0;
 }
@@ -237,21 +281,21 @@ MENU
     width: 100%;
     overflow: hidden;
     border: 4px solid #88520d;
-    background: #422306;
+    background: #42230694;
     color: #f2d2a0;
     box-sizing: border-box;
 }
 
-/* Three panels arranged horizontally */
+/* Panels */
 .menu-track {
     display: flex;
-    width: 300%;
+    width: 900%;
     transition: transform 0.6s ease-in-out;
 }
 
 /* Each panel takes up one window's width */
 .menu-section {
-    flex: 0 0 33.333333%;
+    flex: 0 0 11.111111%;
     box-sizing: border-box;
     padding: 20px 40px;
 }
@@ -269,9 +313,33 @@ MENU
 }
 
 #iced:checked ~ .menu-window .menu-track {
-    transform: translateX(-33.333333%);
+    transform: translateX(-11.11111%);
+}
+
+#specialty:checked ~ .menu-window .menu-track {
+    transform: translateX(-22.22222%);
+}
+
+#frappe:checked ~ .menu-window .menu-track {
+    transform: translateX(-33.33333%);
+}
+
+#fruitysoda:checked ~ .menu-window .menu-track {
+    transform: translateX(-44.44444%);
+}
+
+#sparklingtea:checked ~ .menu-window .menu-track {
+    transform: translateX(-55.55556%);
 }
 
 #matcha:checked ~ .menu-window .menu-track {
-    transform: translateX(-66.666667%);
+    transform: translateX(-66.66667%);
+}
+
+#seasalt:checked ~ .menu-window .menu-track {
+    transform: translateX(-77.77778%);
+}
+
+#frappuccino:checked ~ .menu-window .menu-track {
+    transform: translateX(-88.88889%);
 }
