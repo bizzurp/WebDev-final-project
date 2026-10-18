@@ -10,6 +10,7 @@
     <title>Mike Kafe Ta</title>
 </head>
 <body>
+  <!-- nav bar -->
   <nav class="navbar">
     <div class="navdiv">
       <div class="logo">
@@ -24,10 +25,10 @@
 
       <ul class="nav-menu">
         <li><a href="#menu-page">menu</a></li>
-        <li><a href="#">best</a></li>
-        <li><a href="#">visit</a></li>
-        <li><a href="#">gallery</a></li>
-        <li><a href="#">about</a></li>
+        <li><a href="#best-page">best</a></li>
+        <li><a href="#visit-page">visit</a></li>
+        <li><a href="#gallery-page">gallery</a></li>
+        <li><a href="#about-page">about</a></li>
         <li>
             <a href="https://facebook.com" target="_blank" class="order-btn">
               <span class="btn-symbol">❖</span>
@@ -37,6 +38,7 @@
       </ul>
     </div>
   </nav>
+  <!-- nav bar -->
   <!-- HOME SECTION -->
   <div class="homepage">
     <div class="home-hero-content">
@@ -49,6 +51,7 @@
       </div>
     </div>
   </div>
+  <!-- HOME SECTION END -->
   <!-- MENU SECTION -->
   <div class="menupage" id="menu-page">
     <div class="menutitle">
@@ -57,17 +60,17 @@
     </div>
     <div class="menu-container">
       <!-- Hidden radio controls -->
-       <input type="radio" name="menu" id="hot" checked>
-       <input type="radio" name="menu" id="iced">
-       <input type="radio" name="menu" id="specialty">
-       <input type="radio" name="menu" id="frappe">
-       <input type="radio" name="menu" id="fruitysoda">
-       <input type="radio" name="menu" id="sparklingtea">
-       <input type="radio" name="menu" id="matcha">
-       <input type="radio" name="menu" id="seasalt">
-       <input type="radio" name="menu" id="frappuccino">
-       <!-- Navigation buttons -->
-        <nav class="menu-nav">
+      <input type="radio" name="menu" id="hot" checked>
+      <input type="radio" name="menu" id="iced">
+      <input type="radio" name="menu" id="specialty">
+      <input type="radio" name="menu" id="frappe">
+      <input type="radio" name="menu" id="fruitysoda">
+      <input type="radio" name="menu" id="sparklingtea">
+      <input type="radio" name="menu" id="matcha">
+      <input type="radio" name="menu" id="seasalt">
+      <input type="radio" name="menu" id="frappuccino">
+      <!-- Navigation buttons -->
+      <nav class="menu-nav">
         <label for="hot">Hot Coffee</label>
         <label for="iced">Iced Coffee</label>
         <label for="specialty">Specialty</label>
@@ -77,91 +80,128 @@
         <label for="matcha">Matcha</label>
         <label for="seasalt">Sea Salt</label>
         <label for="frappuccino">Frappuccino</label>
-        
       </nav>
-    <!-- Sliding menu window -->
-    <div class="menu-window">
+      <!-- Sliding menu window -->
+      <div class="menu-window">
         <div class="menu-track">
-            <section class="menu-section">
-                <h2>Hot Coffee</h2>
-                <p>Americano ... ₱119</p>
-                <p>Latte ... ₱119</p>
-                <p>Cappuccino ... ₱119</p>
-                <p>Caramel Macchiato ... ₱119</p>
-                <p>Spanish Latte ... ₱119</p>
-            </section>
-
-            <section class="menu-section">
-                <h2>Iced Coffee</h2>
-                <p>Americano ... ₱129</p>
-                <p>Latte ... ₱129</p>
-                <p>Hazelnut Latte ... ₱129</p>
-                <p>Spanish Latte ... ₱129</p>
-                <p>Caramel Latte ... ₱129</p>
-                <p>Caramel Macchiato... ₱129</p>
-            </section>
-
-            <section class="menu-section">
-                <h2>Specialty</h2>
-                <p>Biscoff Latte ... ₱139</p>
-                <p>Brown Sugar Latte ... ₱139</p>
-                <p>Brown Sugar Biscoff Latte ... ₱139</p>
-                <p>Sea Salt Latte ... ₱139</p>
-            </section>
-
-            <section class="menu-section">
-              <h2>Frappe</h2>
-              <p>Oreo Frappe ... ₱139</p>
-              <p>White Chocolate Strawberry Frappe ... ₱139</p>
-              <p>Triple Chocolate Frappe ... ₱139</p>
-              <p>Caramel Popcorn Frappe ... ₱139</p>
-              <p>Matcha Toffee Frappe ... ₱139</p>
-              <p>Green Tea Matcha Frappe ... ₱139</p>
-              <p>Biscoff Frappe ... ₱139</p>
-            </section>
-
-            <section class="menu-section">
-                <h2>Fruity Soda</h2>
-                <p>Strawberry Soda ... ₱99</p>
-                <p>Blueberry Soda ... ₱99</p>
-                <p>Mango Soda ... ₱99</p>
-                <p>Lemon Soda ... ₱99</p>
-            </section>
-
-            <section class="menu-section">
-                <h2>Sparkling Tea</h2>
-                <p>Biscoff Latte ... ₱139</p>
-                <p>Brown Sugar Latte ... ₱139</p>
-                <p>Brown Sugar Biscoff Latte ... ₱139</p>
-                <p>Sea Salt Latte ... ₱139</p>
-            </section>
-
-            <section class="menu-section">
-                <h2>Matcha</h2>
-                <p>Biscoff Latte ... ₱139</p>
-                <p>Brown Sugar Latte ... ₱139</p>
-                <p>Brown Sugar Biscoff Latte ... ₱139</p>
-                <p>Sea Salt Latte ... ₱139</p>
-            </section>
-
-            <section class="menu-section">
-                <h2>Sea Salt</h2>
-                <p>Biscoff Latte ... ₱139</p>
-                <p>Brown Sugar Latte ... ₱139</p>
-                <p>Brown Sugar Biscoff Latte ... ₱139</p>
-                <p>Sea Salt Latte ... ₱139</p>
-            </section>
-
-            <section class="menu-section">
-                <h2>Frappuccino</h2>
-                <p>Biscoff Latte ... ₱139</p>
-                <p>Brown Sugar Latte ... ₱139</p>
-                <p>Brown Sugar Biscoff Latte ... ₱139</p>
-                <p>Sea Salt Latte ... ₱139</p>
-            </section>
+          <section class="menu-section">
+            <h2>Hot Coffee</h2>
+            <p>Americano ... ₱119</p>
+            <p>Latte ... ₱119</p>
+            <p>Cappuccino ... ₱119</p>
+            <p>Caramel Macchiato ... ₱119</p>
+            <p>Spanish Latte ... ₱119</p>
+          </section>
+          <section class="menu-section">
+            <h2>Iced Coffee</h2>
+            <p>Americano ... ₱129</p>
+            <p>Latte ... ₱129</p>
+            <p>Hazelnut Latte ... ₱129</p>
+            <p>Spanish Latte ... ₱129</p>
+            <p>Caramel Latte ... ₱129</p>
+            <p>Caramel Macchiato... ₱129</p>
+          </section>
+          <section class="menu-section">
+            <h2>Specialty</h2>
+            <p>Biscoff Latte ... ₱139</p>
+            <p>Brown Sugar Latte ... ₱139</p>
+            <p>Brown Sugar Biscoff Latte ... ₱139</p>
+            <p>Sea Salt Latte ... ₱139</p>
+          </section>
+          <section class="menu-section">
+            <h2>Frappe</h2>
+            <p>Oreo Frappe ... ₱139</p>
+            <p>White Chocolate Strawberry Frappe ... ₱139</p>
+            <p>Triple Chocolate Frappe ... ₱139</p>
+            <p>Caramel Popcorn Frappe ... ₱139</p>
+            <p>Matcha Toffee Frappe ... ₱139</p>
+            <p>Green Tea Matcha Frappe ... ₱139</p>
+            <p>Biscoff Frappe ... ₱139</p>
+          </section>
+          <section class="menu-section">
+            <h2>Fruity Soda</h2>
+            <p>Strawberry Soda ... ₱99</p>
+            <p>Blueberry Soda ... ₱99</p>
+            <p>Mango Soda ... ₱99</p>
+            <p>Lemon Soda ... ₱99</p>
+          </section>
+          <section class="menu-section">
+            <h2>Sparkling Tea</h2>
+            <p>Biscoff Latte ... ₱139</p>
+            <p>Brown Sugar Latte ... ₱139</p>
+            <p>Brown Sugar Biscoff Latte ... ₱139</p>
+            <p>Sea Salt Latte ... ₱139</p>
+          </section>
+          <section class="menu-section">
+            <h2>Matcha</h2>
+            <p>Biscoff Latte ... ₱139</p>
+            <p>Brown Sugar Latte ... ₱139</p>
+            <p>Brown Sugar Biscoff Latte ... ₱139</p>
+            <p>Sea Salt Latte ... ₱139</p>
+          </section>
+          <section class="menu-section">
+            <h2>Sea Salt</h2>
+            <p>Biscoff Latte ... ₱139</p>
+            <p>Brown Sugar Latte ... ₱139</p>
+            <p>Brown Sugar Biscoff Latte ... ₱139</p>
+            <p>Sea Salt Latte ... ₱139</p>
+          </section>
+          <section class="menu-section">
+            <h2>Frappuccino</h2>
+            <p>Biscoff Latte ... ₱139</p>
+            <p>Brown Sugar Latte ... ₱139</p>
+            <p>Brown Sugar Biscoff Latte ... ₱139</p>
+            <p>Sea Salt Latte ... ₱139</p>
+          </section>
         </div>
+      </div>
     </div>
   </div>
+  <!-- MENU SECTION END -->
+  <!-- BEST SECTION -->
+  <div class="bestpage" id="best-page">
+    best
+  </div>
+  <!-- BEST SECTION END -->
+   <!-- VISIT SECTION -->  
+<div class="visitpage" id="visit-page">
+    <div class="visit-hero-content">
+
+        <div class="visit-main-heading">
+            <span class="visit-line-top">VISIT US</span>
+
+            <input type="checkbox" id="map-toggle">
+
+            <label for="map-toggle" class="visit-line-bottom">
+                HERE
+            </label>
+
+            <div class="map">
+              <!-- if you want to zoom in more on the map find and adjust "!1d1200" in the iframe src
+               (btw update this comment to make it easier for others to find)-->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1200!2d121.70690558608332!3d17.61935146336688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3385850029095a5d%3A0x20213d326d0cfe0!2sMike%20Kage%20Ta!5e0!3m2!1sen!2sph!4v1792317779005!5m2!1sen!2sph"
+                    title="Mike Kafe Ta location map"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+    </div>
 </div>
+
+  <!-- VISIT SECTION END -->
+  <!-- GALLERY SECTION -->
+  <div class="gallerypage" id="gallery-page">
+    gallery
+  </div>
+  <!-- GALLERY SECTION END -->
+  <!-- ABOUT SECTION -->
+  <div class="aboutpage" id="about-page">
+    about
+  </div>
+  <!-- ABOUT SECTION END -->
 </body>
 </html>

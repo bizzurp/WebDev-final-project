@@ -107,6 +107,11 @@ NAVIGATION BAR
     font-weight: 300; /* Thin look variants */
     letter-spacing: 0.5px;
 }
+.nav-menu a:hover{
+    transition: 0.3s ease;
+    transform:scale(1.1);
+}
+
 /* --- Order Now Button --- */
 .order-btn {
     background-color: #361b0d;
@@ -134,6 +139,22 @@ NAVIGATION BAR
     line-height: 1.2;          
     text-align: center;
 }
+
+@keyframes constant-flash {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.order-btn:hover{
+    animation: constant-flash 0.8s infinite ease-in-out; 
+}
 /*
 =====================
 HOMEPAGE
@@ -146,6 +167,8 @@ HOMEPAGE
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    /* feel free to remove fixed bg attachment if it looks bad */
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -226,7 +249,7 @@ MENU
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
+
     background-color: #402203c4;
     padding: 60px 4% 50px;
     box-sizing: border-box;
@@ -308,6 +331,11 @@ MENU
     transform:scale(1.1)
 }
 
+.menu-nav label:active{
+    transition: 0.1s ease;
+    transform:scale(0.9)
+}
+
 /* Outer window: hides the other sections */
 .menu-window {
     width: 100%;
@@ -374,4 +402,230 @@ MENU
 
 #frappuccino:checked ~ .menu-window .menu-track {
     transform: translateX(-88.88889%);
+}
+/* 
+=====================
+BEST
+=====================
+*/
+.bestpage {
+    width: 100%;
+    min-height: 800px; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    background-color: #FEFFDE;
+    padding: 60px 4% 50px;
+    box-sizing: border-box;
+}
+
+/* 
+=====================
+VISIT
+=====================
+*/
+.visitpage {
+    width: 100%;
+    min-height: 800px;
+    background-color: #422306;
+    padding: 60px 5% 70px;
+    box-sizing: border-box;
+}
+
+.visit-hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Main heading container */
+.visit-main-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: "Lexend Exa", sans-serif;
+    font-size: 85px;
+    color: #FEFFDE;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-align: center;
+
+    margin: 0;
+    padding: 0;
+
+    text-shadow: 3px 5px 15px rgba(0, 0, 0, 0.55);
+}
+
+/* VISIT US text */
+.visit-line-top {
+    font-family: "Lexend Exa", sans-serif;
+    font-size: 85px;
+    font-weight: 400;
+    color: #FEFFDE;
+    letter-spacing: -1px;
+    line-height: 1;
+    text-shadow: 7px 7px 5px #00000062;
+}
+
+/* Hide checkbox but keep it functional */
+#map-toggle {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+/* HERE button */
+.visit-line-bottom {
+    display: inline-block;
+
+    font-family: "Lexend Exa", sans-serif;
+    font-size: 85px;
+    font-weight: 400;
+    color: #361b0d;
+    background-color: #FEFFDE;
+
+    letter-spacing: -3px;
+    line-height: 1;
+    padding: 5px 40px;
+
+    border-radius: 12px;
+    box-shadow: 7px 7px 5px #00000062;
+
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+/* Hover effect */
+.visit-line-bottom:hover {
+    background-color: #D6AD69;
+    transform: translateY(3px);
+}
+
+/* Keyboard accessibility */
+#map-toggle:focus-visible + .visit-line-bottom {
+    outline: 3px solid #D6AD69;
+    outline-offset: 6px;
+}
+
+/* Map container: closed by default */
+.map {
+    width: 100%;
+    max-width: 900px;
+
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+
+    border: 0 solid #88520D;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+
+    margin-top: 0;
+
+    transition:
+        height 0.7s ease,
+        opacity 0.5s ease,
+        margin-top 0.7s ease,
+        border-width 0.7s ease;
+}
+
+/* Google Maps iframe */
+.map iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Open map when HERE is clicked */
+#map-toggle:checked ~ .map {
+    height: 450px;
+    width: 1800px;
+    opacity: 1;
+    margin-top: 35px;
+    border-width: 4px;
+}
+
+/* Change button appearance when map is open */
+#map-toggle:checked + .visit-line-bottom {
+    background-color: #D6AD69;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .visitpage {
+        min-height: auto;
+        padding: 40px 18px 50px;
+    }
+
+    .visit-main-heading {
+        font-size: clamp(42px, 10vw, 65px);
+    }
+
+    .visit-line-top,
+    .visit-line-bottom {
+        font-size: inherit;
+    }
+
+    .visit-line-bottom {
+        padding: 5px 20px;
+        letter-spacing: -2px;
+    }
+
+    .map {
+        border-radius: 12px;
+    }
+
+    #map-toggle:checked ~ .map {
+        height: 350px;
+        margin-top: 25px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .map,
+    .visit-line-bottom {
+        transition: none;
+    }
+}
+
+/* 
+=====================
+GALLERY
+=====================
+*/
+.gallerypage {
+    width: 100%;
+    min-height: 800px; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    background-color: #FEFFDE;
+    padding: 60px 4% 50px;
+    box-sizing: border-box;
+}
+
+/* 
+=====================
+ABOUT
+=====================
+*/
+.aboutpage {
+    width: 100%;
+    min-height: 800px; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    background-color: #422306;
+    padding: 60px 4% 50px;
+    box-sizing: border-box;
 }
