@@ -2,12 +2,25 @@
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
 body {
     margin: 0;
     padding: 0;
     font-family: "Lexend Exa", sans-serif;
+    background-color: #FEFFDE;
+
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
 }
 
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar {
+  display: none;
+}
 /*
 =========================
 NAVIGATION BAR
@@ -15,13 +28,20 @@ NAVIGATION BAR
 */
 /* --- Navigation bar --- */
 .navbar {
-    background-color: #FEFFDE; 
+    background-color: #feffde63; 
     padding: 15px 40px;        
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.479); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.479);
+    transition: 0.3s ease;
 }
+
+.navbar:hover{
+    transition: 0.3s ease;
+    background-color: #feffde;
+}
+
 .navdiv {
     display: flex;
     align-items: center;
@@ -201,7 +221,6 @@ MENU
 .menupage {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../assets/images/IMG_1199.JPG);
     
-    /* FIX: Treat this section exactly like the homepage screen boundary */
     width: 100%;
     min-height: 800px; 
     background-size: cover;
@@ -223,6 +242,10 @@ MENU
 .menutitle h1 {
     margin: 0;
     line-height: 0.9;
+    text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.5),
+    0 4px 6px rgba(0, 0, 0, 0.5),
+    0 6px 8px rgba(0, 0, 0, 0.5);
 }
 
 /* First line */
@@ -230,6 +253,7 @@ MENU
     font-family: "Abhaya Libre", serif;
     font-size: 64px;
     font-weight: 800;
+    padding-right: 75px;
 }
 
 /* Second line */
@@ -237,6 +261,7 @@ MENU
     font-family: "Aguafina Script", cursive;
     font-size: 58px;
     font-weight: 400;
+    padding-left: 75px;
 }
 
 /* Hide the radio controls */
@@ -259,9 +284,11 @@ MENU
     border-radius: 30px;
     font-weight: bold;
     cursor: pointer;
+    text-align: center;
+
+    transition: 0.3s ease;
 }
 
-/* Highlight the selected button */
 #hot:checked ~ .menu-nav label[for="hot"],
 #iced:checked ~ .menu-nav label[for="iced"],
 #specialty:checked ~ .menu-nav label[for="specialty"],
@@ -274,6 +301,11 @@ MENU
 {
     background: #b17a25;
     color: #fffde0;
+}
+
+.menu-nav label:hover{
+    transition: 0.3s ease;
+    transform:scale(1.1)
 }
 
 /* Outer window: hides the other sections */
