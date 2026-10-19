@@ -34,12 +34,17 @@ NAVIGATION BAR
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.479);
-    transition: 0.3s ease;
+    transition: transform 0.4s ease, background-color 0.3s ease;
 }
 
 .navbar:hover{
-    transition: 0.3s ease;
+    transition: transform 0.4s ease, background-color 0.3s ease;
     background-color: #feffde;
+}
+
+/* Hidden state toggled by JS when scrolling down */
+.navbar--hidden {
+    transform: translateY(-100%);
 }
 
 .navdiv {
@@ -377,6 +382,91 @@ MENU
     margin-top: 0;
 }
 
+/* ===== Menu item lists (per-category pricing) ===== */
+
+/* Price row at the top of each category */
+.menu-prices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin: 0 0 24px 0;
+}
+
+/* A single size + price pill */
+.price-tag {
+    font-family: "Lexend Exa", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #FEFFDE;
+    background: #88520d;
+    padding: 8px 20px;
+    border-radius: 24px;
+}
+
+.price-tag .pt-size {
+    opacity: 0.8;
+    margin-right: 8px;
+}
+
+.price-tag .pt-price {
+    font-weight: 800;
+}
+
+/* Centered list of drink names — flows into extra columns when tall */
+.menu-names {
+    columns: 2 260px;        /* up to 2 columns, each ~260px min; collapses to 1 when few items */
+    column-gap: 40px;
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.menu-names .m-name {
+    font-family: "Abhaya Libre", serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #f2d2a0;
+    margin: 0 0 18px 0;
+    break-inside: avoid;     /* don't split a name across columns */
+}
+
+.menu-names .m-name:last-child {
+    margin-bottom: 0;
+}
+
+/* Matcha two-column groups keep their lists single-column */
+.menu-col .menu-names {
+    columns: 1;
+    max-width: none;
+}
+
+/* Matcha Series: two side-by-side groups */
+.menu-twocol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.menu-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    flex: 1 1 0;
+    min-width: 220px;
+}
+
+/* Responsive: stack the two columns on narrow screens */
+@media (max-width: 700px) {
+    .menu-twocol {
+        gap: 28px;
+    }
+}
+
 /* Slide to the selected category */
 #hot:checked ~ .menu-window .menu-track {
     transform: translateX(0);
@@ -426,6 +516,7 @@ BEST
     background-repeat: no-repeat;
     
     background-color: #FEFFDE;
+    background-image: radial-gradient(circle at 50% 38%, rgba(177, 122, 37, 0.18), rgba(254, 255, 222, 0) 60%);
     padding: 60px 4% 50px;
     box-sizing: border-box;
 }
@@ -448,18 +539,31 @@ BEST
 /* First line */
 .besttitle h1:first-child {
     font-family: "Abhaya Libre", serif;
-    font-size: 64px;
+    font-size: 80px;
     font-weight: 800;
-    padding-right: 75px;
+    letter-spacing: 1px;
+    padding-right: 90px;
 }
 
 /* Second line */
 .besttitle h1:last-child {
     font-family: "Aguafina Script", cursive;
-    font-size: 58px;
+    font-size: 74px;
     font-weight: 400;
     color: #b17a25;
-    padding-left: 75px;
+    padding-left: 90px;
+    margin-top: -10px;
+}
+
+/* Subtitle under the title */
+.best-subtitle {
+    font-family: "Lexend Exa", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #88520d;
+    margin: 14px 0 0 0;
 }
 
 /* Card row */
@@ -485,7 +589,7 @@ BEST
     color: #FEFFDE;
     border: 4px solid #88520d;
     border-radius: 24px;
-    padding: 70px 24px 28px;
+    padding: 36px 24px 28px;
 
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
@@ -495,23 +599,6 @@ BEST
     transition: all 0.3s ease;
     transform: translateY(-10px) scale(1.03);
     box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
-}
-
-/* "BEST SELLER" badge */
-.best-badge {
-    position: absolute;
-    top: 18px;
-
-    background-color: #b17a25;
-    color: #fffde0;
-    font-family: "Lexend Exa", sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1px;
-
-    padding: 6px 14px;
-    border-radius: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 
 /* Image wrapper */
@@ -538,22 +625,25 @@ BEST
 /* Drink name */
 .best-name {
     font-family: "Abhaya Libre", serif;
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
     color: #FEFFDE;
     text-align: center;
-    margin: 0 0 8px 0;
+    line-height: 1.1;
+    margin: 0 0 10px 0;
 }
 
 /* Tagline */
 .best-tagline {
     font-family: "Lexend Exa", sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 300;
     color: #f2d2a0;
     text-align: center;
-    line-height: 1.4;
-    margin: 0 0 18px 0;
+    line-height: 1.5;
+    letter-spacing: 0.3px;
+    margin: 0 0 20px 0;
     flex-grow: 1;
 }
 
@@ -562,11 +652,11 @@ BEST
     background-color: #FEFFDE;
     color: #361b0d;
     font-family: "Lexend Exa", sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 
-    padding: 8px 26px;
+    padding: 9px 30px;
     border-radius: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -574,12 +664,12 @@ BEST
 /* Responsive design */
 @media (max-width: 600px) {
     .besttitle h1:first-child {
-        font-size: 48px;
+        font-size: 56px;
         padding-right: 40px;
     }
 
     .besttitle h1:last-child {
-        font-size: 42px;
+        font-size: 50px;
         padding-left: 40px;
     }
 
@@ -595,11 +685,33 @@ MARQUEE
 ===================== 
 */
 .marquee{
-    background:var(--espresso);color:var(--cream);overflow:hidden;white-space:nowrap;padding:10px 0;font-family:Arial;letter-spacing:2px;font-size:13px
+    background: #361b0d;
+    color: #FEFFDE;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 14px 0;
+    font-family: "Lexend Exa", sans-serif;
+    font-weight: 500;
+    letter-spacing: 3px;
+    font-size: 14px;
+    border-top: 3px solid #b17a25;
+    border-bottom: 3px solid #b17a25;
 }
 
 .marquee span{
-    display:inline-block;animation:slide 22s linear infinite
+    display: inline-block;
+    animation: slide 22s linear infinite;
+}
+
+/* Gold bullet separators */
+.marquee .dot{
+    color: #b17a25;
+    font-weight: 700;
+}
+
+/* Pause the scroll on hover */
+.marquee:hover span{
+    animation-play-state: paused;
 }
 
 @keyframes slide{
