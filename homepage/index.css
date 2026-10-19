@@ -205,27 +205,28 @@ HOMEPAGE
 }
 /* "WE ARE" */
 .home-line-top {
-    font-family: "Lexend Exa", sans-serif;
+    font-family: "Abhaya Libre ExtraBold", serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    font-size: 85px;
+    font-size: 125px;
     font-weight: 400;
     color: #FEFFDE;
     letter-spacing: -1px;
     line-height: 1;
-    text-shadow: 7px 7px 5px #00000062;
+    text-shadow: 7px 7px 5px #00000097;
 }
 /* "OPEN" */
 .home-line-bottom {
-    font-family: "Lexend Exa", sans-serif;
-    font-size: 85px;
+    font-family: "Abhaya Libre ExtraBold", serif;
+    font-size: 125px;
     font-weight: 400;
     color: #FEFFDE;
     background-color: #361b0d;
     letter-spacing: -3px;
     line-height: 1;
-    padding: 5px 40px;        
+    padding: 3px 30px 3px 20px;        
     border-radius: 12px;
-    box-shadow: 7px 7px 5px #00000062;
+    margin-right: 75px;
+    box-shadow: 7px 7px 5px #00000097;
 }
 /* OPENS AT 10AM TO 2AM */
 .home-sched {
@@ -427,6 +428,182 @@ BEST
     background-color: #FEFFDE;
     padding: 60px 4% 50px;
     box-sizing: border-box;
+}
+
+/* Center the best section title (matches menutitle) */
+.besttitle {
+    text-align: center;
+    color: #422306;
+    margin-bottom: 40px;
+}
+
+.besttitle h1 {
+    margin: 0;
+    line-height: 0.9;
+    text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.15),
+    0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* First line */
+.besttitle h1:first-child {
+    font-family: "Abhaya Libre", serif;
+    font-size: 64px;
+    font-weight: 800;
+    padding-right: 75px;
+}
+
+/* Second line */
+.besttitle h1:last-child {
+    font-family: "Aguafina Script", cursive;
+    font-size: 58px;
+    font-weight: 400;
+    color: #b17a25;
+    padding-left: 75px;
+}
+
+/* Card row */
+.best-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Individual card */
+.best-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 230px;
+
+    background-color: #361b0d;
+    color: #FEFFDE;
+    border: 4px solid #88520d;
+    border-radius: 24px;
+    padding: 70px 24px 28px;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.best-card:hover {
+    transition: all 0.3s ease;
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+}
+
+/* "BEST SELLER" badge */
+.best-badge {
+    position: absolute;
+    top: 18px;
+
+    background-color: #b17a25;
+    color: #fffde0;
+    font-family: "Lexend Exa", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    padding: 6px 14px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Image wrapper */
+.best-img-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.best-img {
+    width: 170px;
+    height: 170px;
+    object-fit: contain;
+    filter: drop-shadow(5px 8px 10px rgba(0, 0, 0, 0.45));
+    transition: transform 0.3s ease;
+}
+
+.best-card:hover .best-img {
+    transition: transform 0.3s ease;
+    transform: translateY(-8px) scale(1.05);
+}
+
+/* Drink name */
+.best-name {
+    font-family: "Abhaya Libre", serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #FEFFDE;
+    text-align: center;
+    margin: 0 0 8px 0;
+}
+
+/* Tagline */
+.best-tagline {
+    font-family: "Lexend Exa", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    color: #f2d2a0;
+    text-align: center;
+    line-height: 1.4;
+    margin: 0 0 18px 0;
+    flex-grow: 1;
+}
+
+/* Price pill */
+.best-price {
+    background-color: #FEFFDE;
+    color: #361b0d;
+    font-family: "Lexend Exa", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    padding: 8px 26px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .besttitle h1:first-child {
+        font-size: 48px;
+        padding-right: 40px;
+    }
+
+    .besttitle h1:last-child {
+        font-size: 42px;
+        padding-left: 40px;
+    }
+
+    .best-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* 
+=====================
+MARQUEE
+===================== 
+*/
+.marquee{
+    background:var(--espresso);color:var(--cream);overflow:hidden;white-space:nowrap;padding:10px 0;font-family:Arial;letter-spacing:2px;font-size:13px
+}
+
+.marquee span{
+    display:inline-block;animation:slide 22s linear infinite
+}
+
+@keyframes slide{
+    to{transform:translateX(-50%)}
 }
 
 /* 
