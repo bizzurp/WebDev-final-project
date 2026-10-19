@@ -23,14 +23,19 @@
         </a>
       </div>
 
+      <input type="checkbox" id="nav-menu-toggle" class="nav-toggle-check">
+      <label for="nav-menu-toggle" class="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </label>
+
       <ul class="nav-menu">
-        <li><a href="#menu-page">menu</a></li>
         <li><a href="#best-page">best</a></li>
-        <li><a href="#visit-page">visit</a></li>
+        <li><a href="#menu-page">menu</a></li>
         <li><a href="#gallery-page">gallery</a></li>
         <li><a href="#about-page">about</a></li>
+        <li><a href="#visit-page">visit</a></li>
         <li>
-            <a href="https://facebook.com" target="_blank" class="order-btn">
+            <a href="https://www.facebook.com/profile.php?id=61592022271806" target="_blank" class="order-btn">
               <span class="btn-symbol">❖</span>
               <span>ORDER<br>NOW</span>
             </a>
@@ -42,16 +47,98 @@
   <!-- HOME SECTION -->
   <div class="homepage">
     <div class="home-hero-content">
-      <div class="home-main-heading">
-        <span class="home-line-top">WE ARE</span><br>
-        <span class="home-line-bottom">OPEN</span>
+      <div class="home-text">
+        <p class="home-status"><span class="status-dot"></span>Open Daily &middot; 10:00 AM &ndash; 2:00 AM</p>
+        <h1 class="home-headline">Where Every Cup Connects</h1>
+        <p class="home-lead">Rooted in good coffee and real conversations, Mike Kafe Ta is the little kafe where cousins become friends and strangers feel at home. Open daily from 10AM till 2AM.</p>
+        <div class="home-cta">
+          <a href="https://www.facebook.com/profile.php?id=61592022271806" target="_blank" rel="noopener" class="home-btn home-btn-primary">Order on Facebook</a>
+          <a href="#menu-page" class="home-btn home-btn-secondary">See the Menu</a>
+        </div>
       </div>
-      <div class="home-sched">
-        <p>10:00 AM - 2:00 AM EVERYDAY</p>
+      <div class="home-product">
+        <img src="../assets/best sellers/Layered Iced Coffee Café no bg.png" alt="Mike Kafe Ta signature iced coffee">
       </div>
     </div>
   </div>
   <!-- HOME SECTION END -->
+  <!-- BEST SECTION -->
+  <div class="bestpage" id="best-page">
+    <div class="besttitle">
+      <h1>Best</h1>
+      <h1>Sellers</h1>
+      <p class="best-subtitle">The drinks that everyone keeps coming back for</p>
+    </div>
+    <div class="best-container">
+
+      <div class="best-card">
+        <div class="best-img-wrap">
+          <img src="../assets/best sellers/Biscoff Frappe no bg.png" alt="Biscoff Frappe" class="best-img">
+        </div>
+        <h3 class="best-name">Biscoff Frappe</h3>
+        <p class="best-tagline">Blended cookie bliss in every sip.</p>
+        <span class="best-price">₱139</span>
+      </div>
+
+      <div class="best-card">
+        <div class="best-img-wrap">
+          <img src="../assets/best sellers/Biscoff Latte no bg.png" alt="Biscoff Latte" class="best-img">
+        </div>
+        <h3 class="best-name">Biscoff Latte</h3>
+        <p class="best-tagline">Warm spice meets smooth espresso.</p>
+        <span class="best-price">₱139</span>
+      </div>
+
+      <div class="best-card">
+        <div class="best-img-wrap">
+          <img src="../assets/best sellers/Sea Salt Latte no bg.png" alt="Sea Salt Latte" class="best-img">
+        </div>
+        <h3 class="best-name">Sea Salt Latte</h3>
+        <p class="best-tagline">Sweet, salty, impossible to resist.</p>
+        <span class="best-price">₱139</span>
+      </div>
+
+      <div class="best-card">
+        <div class="best-img-wrap">
+          <img src="../assets/best sellers/Iced Matcha Latte Café no bg.png" alt="Iced Matcha Latte" class="best-img">
+        </div>
+        <h3 class="best-name">Iced Matcha Latte</h3>
+        <p class="best-tagline">Garden-fresh green tea, chilled.</p>
+        <span class="best-price">₱139</span>
+      </div>
+
+      <div class="best-card">
+        <div class="best-img-wrap">
+          <img src="../assets/best sellers/Layered Iced Coffee Café no bg.png" alt="Layered Iced Coffee" class="best-img">
+        </div>
+        <h3 class="best-name">Spanish Latte</h3>
+        <p class="best-tagline">Bold layers that wake you up.</p>
+        <span class="best-price">₱129</span>
+      </div>
+
+      <!-- NEW BEST SELLER 1 — paste image path into src="", then update name/tagline/price -->
+      <div class="best-card">
+        <div class="best-img-wrap">
+          <img src="" alt="Best seller" class="best-img">
+        </div>
+        <h3 class="best-name">Drink Name</h3>
+        <p class="best-tagline">Short tagline here.</p>
+        <span class="best-price">₱000</span>
+      </div>
+
+      <!-- NEW BEST SELLER 2 — paste image path into src="", then update name/tagline/price -->
+      <div class="best-card">
+        <div class="best-img-wrap">
+          <img src="" alt="Best seller" class="best-img">
+        </div>
+        <h3 class="best-name">Drink Name</h3>
+        <p class="best-tagline">Short tagline here.</p>
+        <span class="best-price">₱000</span>
+      </div>
+
+    </div>
+  </div>
+  <!-- BEST SECTION END -->
   <!-- MENU SECTION -->
   <div class="menupage" id="menu-page">
     <div class="menutitle">
@@ -228,111 +315,276 @@
     </div>
   </div>
   <!-- MENU SECTION END -->
-  <!-- BEST SECTION -->
-  <div class="bestpage" id="best-page">
-    <div class="besttitle">
-      <h1>Best</h1>
-      <h1>Sellers</h1>
-      <p class="best-subtitle">The drinks that everyone keeps coming back for</p>
-    </div>
-    <div class="best-container">
-
-      <div class="best-card">
-        <div class="best-img-wrap">
-          <img src="../assets/best sellers/Biscoff Frappe no bg.png" alt="Biscoff Frappe" class="best-img">
-        </div>
-        <h3 class="best-name">Biscoff Frappe</h3>
-        <p class="best-tagline">Blended cookie bliss in every sip.</p>
-        <span class="best-price">₱139</span>
-      </div>
-
-      <div class="best-card">
-        <div class="best-img-wrap">
-          <img src="../assets/best sellers/Biscoff Latte no bg.png" alt="Biscoff Latte" class="best-img">
-        </div>
-        <h3 class="best-name">Biscoff Latte</h3>
-        <p class="best-tagline">Warm spice meets smooth espresso.</p>
-        <span class="best-price">₱139</span>
-      </div>
-
-      <div class="best-card">
-        <div class="best-img-wrap">
-          <img src="../assets/best sellers/Sea Salt Latte no bg.png" alt="Sea Salt Latte" class="best-img">
-        </div>
-        <h3 class="best-name">Sea Salt Latte</h3>
-        <p class="best-tagline">Sweet, salty, impossible to resist.</p>
-        <span class="best-price">₱139</span>
-      </div>
-
-      <div class="best-card">
-        <div class="best-img-wrap">
-          <img src="../assets/best sellers/Iced Matcha Latte Café no bg.png" alt="Iced Matcha Latte" class="best-img">
-        </div>
-        <h3 class="best-name">Iced Matcha Latte</h3>
-        <p class="best-tagline">Garden-fresh green tea, chilled.</p>
-        <span class="best-price">₱139</span>
-      </div>
-
-      <div class="best-card">
-        <div class="best-img-wrap">
-          <img src="../assets/best sellers/Layered Iced Coffee Café no bg.png" alt="Layered Iced Coffee" class="best-img">
-        </div>
-        <h3 class="best-name">Spanish Latte</h3>
-        <p class="best-tagline">Bold layers that wake you up.</p>
-        <span class="best-price">₱129</span>
-      </div>
-
-    </div>
-  </div>
-  <!-- BEST SECTION END -->
 
   <!-- MARQUEE -->
   <div class="marquee" aria-hidden="true">
-    <span>COFFEE <b class="dot"></b>•</b> COUSINS <b class="dot">•</b> CONNECTIONS <b class="dot">•</b> OPEN TIL 2AM <b class="dot">•</b> WE DELIVER <b class="dot">•</b> GOOD VIBES <b class="dot">•</b>&nbsp;</span>
+    <span>COFFEE <b class="dot">•</b> COUSINS <b class="dot">•</b> CONNECTIONS <b class="dot">•</b> OPEN TIL 2AM <b class="dot">•</b> WE DELIVER <b class="dot">•</b> GOOD VIBES <b class="dot">•</b>&nbsp;</span>
     <span>COFFEE <b class="dot">•</b> COUSINS <b class="dot">•</b> CONNECTIONS <b class="dot">•</b> OPEN TIL 2AM <b class="dot">•</b> WE DELIVER <b class="dot">•</b> GOOD VIBES <b class="dot">•</b>&nbsp;</span>
   </div>
   <!-- MARQUEE END-->
 
-   <!-- VISIT SECTION -->  
-  <div class="visitpage" id="visit-page">
-    <div class="visit-hero-content">
 
-        <div class="visit-main-heading">
-            <span class="visit-line-top">VISIT US</span>
-
-            <input type="checkbox" id="map-toggle">
-
-            <label for="map-toggle" class="visit-line-bottom">
-                HERE
-            </label>
-
-            <div class="map">
-              <!-- if you want to zoom in more on the map find and adjust "!1d1200" in the iframe src
-               (btw update this comment to make it easier for others to find)-->
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1200!2d121.70690558608332!3d17.61935146336688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3385850029095a5d%3A0x20213d326d0cfe0!2sMike%20Kage%20Ta!5e0!3m2!1sen!2sph!4v1792317779005!5m2!1sen!2sph"
-                    title="Mike Kafe Ta location map"
-                    loading="lazy"
-                    allowfullscreen
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-        </div>
-
-    </div>
-  </div>
-
-  <!-- VISIT SECTION END -->
   <!-- GALLERY SECTION -->
   <div class="gallerypage" id="gallery-page">
-    gallery
+    <div class="gallerytitle">
+      <h1>Gallery</h1>
+      <p class="gallery-script">moments &amp; memories</p>
+      <p class="gallery-subtitle">A peek into life at Mike Kafe Ta</p>
+    </div>
+
+    <div class="gallery-grid">
+      <!-- ============================================================
+           GALLERY IMAGES — paste each image path into the src="" below.
+           Example: src="../assets/gallery/photo1.jpg"
+           ============================================================ -->
+
+      <figure class="gallery-item">
+        <!-- IMAGE 1 -->
+        <img class="gallery-img" src="" alt="Mike Kafe Ta moment">
+        <figcaption class="gallery-caption">Freshly brewed</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <!-- IMAGE 2 -->
+        <img class="gallery-img" src="" alt="Mike Kafe Ta moment">
+        <figcaption class="gallery-caption">Cousins &amp; connections</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <!-- IMAGE 3 -->
+        <img class="gallery-img" src="" alt="Mike Kafe Ta moment">
+        <figcaption class="gallery-caption">Our cozy corner</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <!-- IMAGE 4 -->
+        <img class="gallery-img" src="" alt="Mike Kafe Ta moment">
+        <figcaption class="gallery-caption">Signature sips</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <!-- IMAGE 5 -->
+        <img class="gallery-img" src="" alt="Mike Kafe Ta moment">
+        <figcaption class="gallery-caption">Late-night brews</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <!-- IMAGE 6 -->
+        <img class="gallery-img" src="" alt="Mike Kafe Ta moment">
+        <figcaption class="gallery-caption">Made with love</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <!-- IMAGE 7 -->
+        <img class="gallery-img" src="" alt="Mike Kafe Ta moment">
+        <figcaption class="gallery-caption">Sweet treats</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <!-- IMAGE 8 -->
+        <img class="gallery-img" src="" alt="Mike Kafe Ta moment">
+        <figcaption class="gallery-caption">See you soon</figcaption>
+      </figure>
+    </div>
   </div>
   <!-- GALLERY SECTION END -->
   <!-- ABOUT SECTION -->
   <div class="aboutpage" id="about-page">
-    about
+    <div class="abouttitle">
+      <h1>About</h1>
+      <p class="about-script">our little kafe</p>
+    </div>
+
+    <!-- OUR STORY -->
+    <div class="about-story">
+      <div class="about-logo">
+        <svg class="logo-lockup" viewBox="0 0 200 230" role="img" aria-label="Mike Kafe Ta logo">
+          <g fill="none" stroke="#361b0d" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+            <!-- three dots -->
+            <circle cx="100" cy="14" r="4" fill="#361b0d" stroke="none"/>
+            <circle cx="100" cy="34" r="4" fill="#361b0d" stroke="none"/>
+            <circle cx="100" cy="54" r="4" fill="#361b0d" stroke="none"/>
+            <!-- roof -->
+            <polyline points="52,118 100,78 148,118"/>
+            <!-- the letter M -->
+            <path d="M74,120 V175 M74,120 L100,150 L126,120 M126,120 V175"/>
+          </g>
+          <!-- coffee bean -->
+          <g transform="translate(100,205)">
+            <ellipse cx="0" cy="0" rx="12" ry="16" fill="#361b0d"/>
+            <path d="M0,-13 C-6,-6 -6,6 0,13" fill="none" stroke="#FEFFDE" stroke-width="2.5" stroke-linecap="round"/>
+          </g>
+        </svg>
+        <h2 class="logo-wordmark">MIKE KAFE TA</h2>
+        <div class="logo-rule"></div>
+        <p class="logo-slogan">COFFEE. COUSINS. CONNECTIONS.</p>
+      </div>
+
+      <div class="about-narrative">
+        <h3 class="about-kicker">Our Story</h3>
+        <p>Mike Kafe Ta is a play of words. It may sound &ldquo;Makkapitta,&rdquo; meaning &ldquo;cousins,&rdquo; or &ldquo;Mike, kafa Ta,&rdquo; meaning &ldquo;Mike, let&rsquo;s have coffee,&rdquo; in the Ybanag language.</p>
+        <p>Mike Kafe Ta began with a simple idea from Mike.</p>
+        <p>He saw the need for a place where people could pause, talk, and feel at ease&mdash;over good coffee and real conversations.</p>
+        <p>He brought that idea to his three cousins, Tina, Ruby Anne, and Jomary. Together, they built it from the ground up.</p>
+        <p>Each of them plays a part. Different strengths. One goal. A space that&rsquo;s honest, familiar, and made for the kind of moments that matter.</p>
+        <p>Mike Kafe Ta is their way of giving back&mdash;through coffee, company, and the connections that stay.</p>
+      </div>
+    </div>
+
+    <div class="about-divider"></div>
+
+    <!-- LOGO MEANING -->
+    <div class="about-meaning">
+      <h3 class="about-kicker about-kicker-center">Logo Meaning</h3>
+
+      <div class="meaning-row">
+        <div class="meaning-icon">
+          <svg viewBox="0 0 60 60" role="img" aria-label="The roof">
+            <polyline points="10,42 30,20 50,42" fill="none" stroke="#361b0d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h4 class="meaning-name">The Roof</h4>
+        <p class="meaning-desc">A quiet nod to home. A place where people can be themselves. No need to rush. No need to pretend.</p>
+      </div>
+
+      <div class="meaning-row">
+        <div class="meaning-icon">
+          <svg viewBox="0 0 60 60" role="img" aria-label="The letter M">
+            <path d="M16,44 V18 L30,32 L44,18 V44" fill="none" stroke="#361b0d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h4 class="meaning-name">The Letter &ldquo;M&rdquo;</h4>
+        <p class="meaning-desc">Inspired by Mike. Built with intention. The form reflects balance&mdash;strong, steady, and open to everyone.</p>
+      </div>
+
+      <div class="meaning-row">
+        <div class="meaning-icon">
+          <svg viewBox="0 0 60 60" role="img" aria-label="The three dots">
+            <circle cx="30" cy="16" r="5" fill="#361b0d"/>
+            <circle cx="30" cy="30" r="5" fill="#361b0d"/>
+            <circle cx="30" cy="44" r="5" fill="#361b0d"/>
+          </svg>
+        </div>
+        <h4 class="meaning-name">The Three Dots</h4>
+        <p class="meaning-desc">Mike&rsquo;s three cousins: Tina. Ruby Anne. Jomary. Three people. One shared belief. Also a reminder of what matters most&mdash;connection, trust, and purpose.</p>
+      </div>
+
+      <div class="meaning-row">
+        <div class="meaning-icon">
+          <svg viewBox="0 0 60 60" role="img" aria-label="The coffee bean">
+            <ellipse cx="30" cy="30" rx="13" ry="18" fill="#361b0d"/>
+            <path d="M30,13 C23,22 23,38 30,47" fill="none" stroke="#FEFFDE" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h4 class="meaning-name">The Coffee Bean</h4>
+        <p class="meaning-desc">The reason people come in. The detail that ties everything together. Simple, honest, and always worth sharing.</p>
+      </div>
+    </div>
+
+    <div class="about-divider"></div>
+
+    <!-- OUR PROMISE -->
+    <div class="about-promise">
+      <h3 class="about-kicker about-kicker-center">Our Promise</h3>
+      <p class="promise-slogan">COFFEE. COUSINS. CONNECTIONS.</p>
+
+      <div class="promise-grid">
+        <div class="promise-col">
+          <div class="promise-icon">
+            <svg viewBox="0 0 60 60" role="img" aria-label="Coffee">
+              <path d="M14,26 H44 V38 A10,10 0 0 1 34,48 H24 A10,10 0 0 1 14,38 Z" fill="none" stroke="#361b0d" stroke-width="4" stroke-linejoin="round"/>
+              <path d="M44,29 H50 A6,6 0 0 1 50,41 H44" fill="none" stroke="#361b0d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M24,12 C22,16 26,18 24,22 M32,12 C30,16 34,18 32,22" fill="none" stroke="#361b0d" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4 class="promise-name">Coffee</h4>
+          <p class="promise-desc">Made with care. Meant to be enjoyed, not rushed. It starts the conversation.</p>
+        </div>
+
+        <div class="promise-col">
+          <div class="promise-icon">
+            <svg viewBox="0 0 60 60" role="img" aria-label="Cousins">
+              <circle cx="30" cy="20" r="7" fill="#361b0d"/>
+              <path d="M18,46 A12,12 0 0 1 42,46 Z" fill="#361b0d"/>
+              <circle cx="13" cy="26" r="5.5" fill="#361b0d"/>
+              <path d="M4,46 A9,9 0 0 1 19,39" fill="none" stroke="#361b0d" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="47" cy="26" r="5.5" fill="#361b0d"/>
+              <path d="M56,46 A9,9 0 0 0 41,39" fill="none" stroke="#361b0d" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4 class="promise-name">Cousins</h4>
+          <p class="promise-desc">More than family. It&rsquo;s how we treat you. Like one of our own, every time.</p>
+        </div>
+
+        <div class="promise-col">
+          <div class="promise-icon">
+            <svg viewBox="0 0 60 60" role="img" aria-label="Connections">
+              <path d="M8,34 L20,26 L30,32 L40,26 L52,34" fill="none" stroke="#361b0d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M20,26 L24,38 M40,26 L36,38" fill="none" stroke="#361b0d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h4 class="promise-name">Connections</h4>
+          <p class="promise-desc">Good talks. New ideas. Old friends. That&rsquo;s what stays with you.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="about-tagline">One idea. Four cousins. A place built on shared values and the belief that the best things happen over coffee.</p>
   </div>
   <!-- ABOUT SECTION END -->
+
+  <!-- VISIT SECTION (footer) -->
+  <div class="visitpage" id="visit-page">
+    <div class="visit-grid">
+      <div class="visit-info">
+        <p class="visit-kicker">Find Us</p>
+        <h2 class="visit-headline">Open til 2AM.<br>Everyday.</h2>
+
+        <ul class="visit-list">
+          <li class="visit-hours">Monday &ndash; Sunday &nbsp; 10:00 AM &ndash; 2:00 AM</li>
+
+          <li>
+            <svg class="visit-ic" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.6 10.8a12 12 0 0 0 5.6 5.6l1.9-1.9a1 1 0 0 1 1-.24 9.6 9.6 0 0 0 3 .48 1 1 0 0 1 1 1V19a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1h2.3a1 1 0 0 1 1 1 9.6 9.6 0 0 0 .48 3 1 1 0 0 1-.24 1z" fill="#b17a25"/>
+            </svg>
+            <a href="tel:09982980768">09982980768</a> &mdash; Call / Text to order
+          </li>
+
+          <li>
+            <svg class="visit-ic" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 4h16a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H8l-4 4V5a1 1 0 0 1 1-1z" fill="#b17a25"/>
+            </svg>
+            We Deliver! Message us on Facebook.
+          </li>
+
+          <li>
+            <svg class="visit-ic" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" fill="#b17a25"/>
+            </svg>
+            16 Baquiran Street, Caritan Centro, Tuguegarao City, Philippines, 3500
+          </li>
+        </ul>
+
+        <a href="https://www.facebook.com/profile.php?id=61592022271806" target="_blank" rel="noopener" class="visit-fb">Message on Facebook</a>
+      </div>
+
+      <div class="visit-map">
+        <!-- if you want to zoom in more on the map find and adjust "!1d1200" in the iframe src -->
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1200!2d121.70690558608332!3d17.61935146336688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3385850029095a5d%3A0x20213d326d0cfe0!2sMike%20Kage%20Ta!5e0!3m2!1sen!2sph!4v1792317779005!5m2!1sen!2sph"
+            title="Mike Kafe Ta location map"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+
+    <div class="visit-thanks">
+      <p>Thank you for supporting our little kafe!</p>
+    </div>
+  </div>
+  <!-- VISIT SECTION END -->
 
   <script src="index.js" defer></script>
 </body>
