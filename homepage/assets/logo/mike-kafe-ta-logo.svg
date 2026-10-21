@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200"
+     width="1200" height="1200" role="img"
+     aria-label="Mike Kafe Ta — Coffee. Cousins. Connections.">
+  <title>Mike Kafe Ta Logo</title>
+  <desc>Vertically stacked monochrome logo: three dots, a peaked roof, a geometric M monogram, the wordmark MIKE KAFE TA, a coffee-bean divider, and the tagline COFFEE. COUSINS. CONNECTIONS.</desc>
+
+  <!-- Color tokens -->
+  <style>
+    :root {
+      --espresso: #361B0D;
+      --coffee:   #684323;
+      --ivory:    #FEFFDE;
+    }
+    .espresso-fill   { fill: #361B0D; }
+    .espresso-stroke { stroke: #361B0D; fill: none; }
+    .coffee-fill     { fill: #684323; }
+    .seam            { stroke: #FEFFDE; fill: none; }
+    .wordmark-text {
+      fill: #361B0D;
+      font-family: "Lexend Exa", "Century Gothic", "Futura", "Segoe UI", sans-serif;
+      font-weight: 400;
+      text-anchor: middle;
+    }
+    .tagline-text {
+      fill: #361B0D;
+      font-family: "Lexend Exa", "Century Gothic", "Futura", "Segoe UI", sans-serif;
+      font-weight: 300;
+      text-anchor: middle;
+    }
+  </style>
+
+  <!-- 1. THREE VERTICAL DOTS — central axis x=600 -->
+  <g id="three-dots" class="espresso-fill">
+    <circle cx="600" cy="150" r="17"/>
+    <circle cx="600" cy="214" r="17"/>
+    <circle cx="600" cy="278" r="17"/>
+  </g>
+
+  <!-- 2. ROOF SYMBOL — two diagonal arms, open bottom, wider than the M -->
+  <g id="roof-symbol" class="espresso-stroke"
+     stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="462,470 600,352 738,470"/>
+  </g>
+
+  <!-- 3. GEOMETRIC M MONOGRAM — two vertical stems + inner diagonals to an elongated central valley -->
+  <g id="m-monogram" class="espresso-stroke"
+     stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
+    <!-- left stem -->
+    <line x1="505" y1="512" x2="505" y2="690"/>
+    <!-- right stem -->
+    <line x1="695" y1="512" x2="695" y2="690"/>
+    <!-- inner diagonals meeting at an elongated valley (dips below the stems) -->
+    <polyline points="505,512 600,636 695,512"/>
+  </g>
+
+  <!-- 4. MAIN WORDMARK -->
+  <g id="wordmark">
+    <text class="wordmark-text" x="600" y="830"
+          font-size="112" letter-spacing="14">MIKE KAFE TA</text>
+  </g>
+
+  <!-- 5. HORIZONTAL DIVIDER + COFFEE BEAN — centered on x=600 -->
+  <g id="coffee-bean-divider">
+    <!-- left line -->
+    <line class="espresso-stroke" x1="300" y1="905" x2="552" y2="905"
+          stroke-width="4" stroke-linecap="round"/>
+    <!-- right line (mirror) -->
+    <line class="espresso-stroke" x1="648" y1="905" x2="900" y2="905"
+          stroke-width="4" stroke-linecap="round"/>
+    <!-- upright coffee bean -->
+    <ellipse class="coffee-fill" cx="600" cy="905" rx="22" ry="32"/>
+    <!-- organic S-curve seam -->
+    <path class="seam" d="M600,877 C586,889 586,921 600,933"
+          stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- 6. TAGLINE -->
+  <g id="tagline">
+    <text class="tagline-text" x="600" y="1000"
+          font-size="40" letter-spacing="9">COFFEE. COUSINS. CONNECTIONS</text>
+  </g>
+</svg>

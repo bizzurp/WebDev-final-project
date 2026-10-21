@@ -48,7 +48,7 @@
   <div class="homepage">
     <div class="home-hero-content">
       <div class="home-text">
-        <p class="home-status"><span class="status-dot"></span>Open Daily &middot; 10:00 AM &ndash; 2:00 AM</p>
+        <p class="home-status">Open Daily &middot; 10:00 AM &ndash; 2:00 AM</p>
         <h1 class="home-headline">Where Every Cup Connects</h1>
         <p class="home-lead">Rooted in good coffee and real conversations, Mike Kafe Ta is the little kafe where cousins become friends and strangers feel at home. Open daily from 10AM till 2AM.</p>
         <div class="home-cta">
@@ -142,6 +142,7 @@
     <div class="menutitle">
       <h1>Menu</h1>
       <h1>Drinks</h1>
+      <p class="menu-intro">Pick a category and find your next favorite &mdash; handcrafted, every cup.</p>
     </div>
     <div class="menu-container">
       <!-- Hidden radio controls -->
@@ -154,17 +155,19 @@
       <input type="radio" name="menu" id="matcha">
       <input type="radio" name="menu" id="seasalt">
       <input type="radio" name="menu" id="frappuccino">
-      <!-- Navigation buttons -->
-      <nav class="menu-nav">
-        <label for="hot">Hot Coffee Drinks</label>
-        <label for="iced">Iced Coffee Drinks</label>
-        <label for="specialty">Specialty Drinks</label>
-        <label for="frappe">Frappe</label>
-        <label for="fruitysoda">Fruity Soda</label>
-        <label for="sparklingtea">Sparkling Tea</label>
-        <label for="matcha">Matcha Series</label>
-        <label for="seasalt">Sea Salt Series</label>
-        <label for="frappuccino">Frappuccino</label>
+      <!-- Navigation tabs (scrollable on small screens) -->
+      <nav class="menu-nav" aria-label="Drink categories">
+        <div class="menu-nav-track">
+          <label for="hot" tabindex="0" role="tab">Hot Coffee Drinks</label>
+          <label for="iced" tabindex="0" role="tab">Iced Coffee Drinks</label>
+          <label for="specialty" tabindex="0" role="tab">Specialty Drinks</label>
+          <label for="frappe" tabindex="0" role="tab">Frappe</label>
+          <label for="fruitysoda" tabindex="0" role="tab">Fruity Soda</label>
+          <label for="sparklingtea" tabindex="0" role="tab">Sparkling Tea</label>
+          <label for="matcha" tabindex="0" role="tab">Matcha Series</label>
+          <label for="seasalt" tabindex="0" role="tab">Sea Salt Series</label>
+          <label for="frappuccino" tabindex="0" role="tab">Frappuccino</label>
+        </div>
       </nav>
       <!-- Sliding menu window -->
       <div class="menu-window">

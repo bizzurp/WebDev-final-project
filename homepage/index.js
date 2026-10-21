@@ -36,3 +36,63 @@
   });
 })();
 
+
+// ============================================================
+// MENU CATEGORY TABS
+// Keyboard support + keep the active tab scrolled into view.
+// The visual switching itself is pure CSS (radio :checked); this
+// only adds keyboard activation and arrow-key navigation so the
+// label-based tabs are fully accessible.
+// ============================================================
+(function () {
+  const nav = document.querySelector(".menu-nav");
+  if (!nav) return;
+
+  const labels = Array.from(nav.querySelectorAll("label[role='tab']"));
+  if (!labels.length) return;
+
+  function activate(label, { focus = true } = {}) {
+    const input = document.getElementById(label.getAttribute("for"));
+    if (!input) return;
+    input.checked = true;
+    // Reflect selection state for assistive tech.
+    labels.forEach((l) => l.setAttribute("aria-selected", l === label ? "true" : "false"));
+    if (focus) label.focus();
+    // Keep the chosen tab visible inside the scrollable track.
+    label.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
+  }
+
+  // Initialize aria-selected from whichever radio starts checked.
+  labels.forEach((label) => {
+    const input = document.getElementById(label.getAttribute("for"));
+    label.setAttribute("aria-selected", input && input.checked ? "true" : "false");
+  });
+
+  labels.forEach((label, index) => {
+    // Enter / Space activates the focused tab.
+    label.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") {
+        e.preventDefault();
+        activate(label);
+      } else if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+        e.preventDefault();
+        activate(labels[(index + 1) % labels.length]);
+      } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+        e.preventDefault();
+        activate(labels[(index - 1 + labels.length) % labels.length]);
+      } else if (e.key === "Home") {
+        e.preventDefault();
+        activate(labels[0]);
+      } else if (e.key === "End") {
+        e.preventDefault();
+        activate(labels[labels.length - 1]);
+      }
+    });
+
+    // Pointer clicks: the label toggles the radio natively, so just
+    // sync aria state and center the tab without stealing focus.
+    label.addEventListener("click", () => {
+      requestAnimationFrame(() => activate(label, { focus: false }));
+    });
+  });
+})();

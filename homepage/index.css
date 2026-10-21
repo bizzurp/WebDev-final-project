@@ -258,15 +258,6 @@ HOMEPAGE
     margin: 0 0 18px 0;
 }
 
-.status-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #b17a25;
-    box-shadow: 0 0 0 0 rgba(177, 122, 37, 0.6);
-    animation: statusPulse 2s ease-in-out infinite;
-}
-
 .home-headline {
     font-family: "Abhaya Libre", serif;
     font-size: clamp(42px, 6vw, 84px);
@@ -343,12 +334,6 @@ HOMEPAGE
     50% { transform: translateY(-14px); }
 }
 
-@keyframes statusPulse {
-    0% { box-shadow: 0 0 0 0 rgba(177, 122, 37, 0.6); }
-    70% { box-shadow: 0 0 0 10px rgba(177, 122, 37, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(177, 122, 37, 0); }
-}
-
 @media (prefers-reduced-motion: no-preference) {
     .home-status { animation: heroRise 0.6s ease-out both; }
     .home-headline { animation: heroRise 0.6s ease-out 0.1s both; }
@@ -363,7 +348,6 @@ HOMEPAGE
 
 @media (prefers-reduced-motion: reduce) {
     .home-product img { animation: none; }
-    .status-dot { animation: none; }
 }
 
 /* Responsive: stack product over text */
@@ -414,7 +398,7 @@ MENU
 .menutitle {
     text-align: center;
     color: #FEFFDE;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
 }
 
 .menutitle h1 {
@@ -442,44 +426,70 @@ MENU
     padding-left: 75px;
 }
 
+/* Short introductory line under the title */
+.menu-intro {
+    font-family: "Lexend Exa", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    color: #f2d2a0;
+    max-width: 52ch;
+    margin: 16px auto 0;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
 /* Hide the radio controls */
 .menu-container input {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    width: 1px;
+    height: 1px;
 }
 
-/* Keep buttons at the top */
+/* ===== Category tabs ===== */
 .menu-nav {
-    display: grid;
-    grid-template-columns: repeat(10, minmax(0, 1fr));
-    gap: 12px 16px;
     width: 100%;
-    max-width: 1100px;
-    margin: 0 auto 25px;
+    max-width: 1000px;
+    margin: 0 auto 28px;
 }
 
-.menu-nav label:nth-of-type(6) {
-    grid-column: 2 / span 2;
-}   
+/* A balanced, wrapping pill row on desktop; becomes a single
+   horizontally scrollable track on narrow screens. */
+.menu-nav-track {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
 
 .menu-nav label {
-    grid-column: span 2;
-    min-height: 35px;
-    padding: 10px;
+    flex: 0 0 auto;
+    min-height: 40px;
+    padding: 10px 22px;
     box-sizing: border-box;
 
     background: #fffde0;
     color: #422306;
-    
-    border-radius: 15px;
-    font-weight: bold;
+
+    border: 2px solid transparent;
+    border-radius: 999px;
+    font-family: "Lexend Exa", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
     cursor: pointer;
 
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    
-    transition: 0.3s ease;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.25s ease, color 0.25s ease,
+                border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
 }
 
 #hot:checked ~ .menu-nav label[for="hot"],
@@ -494,25 +504,47 @@ MENU
 {
     background: #b17a25;
     color: #fffde0;
+    border-color: #f2d2a0;
+    box-shadow: 0 4px 14px rgba(177, 122, 37, 0.5);
 }
 
-.menu-nav label:hover{
-    transition: 0.3s ease;
-    transform:scale(1.1)
+.menu-nav label:hover {
+    background: #f2d2a0;
+    color: #422306;
+    transform: translateY(-2px);
 }
 
-.menu-nav label:active{
-    transition: 0.1s ease;
-    transform:scale(0.9)
+/* Keep the hover lift for the active tab without changing its color */
+#hot:checked ~ .menu-nav label[for="hot"]:hover,
+#iced:checked ~ .menu-nav label[for="iced"]:hover,
+#specialty:checked ~ .menu-nav label[for="specialty"]:hover,
+#frappe:checked ~ .menu-nav label[for="frappe"]:hover,
+#fruitysoda:checked ~ .menu-nav label[for="fruitysoda"]:hover,
+#sparklingtea:checked ~ .menu-nav label[for="sparklingtea"]:hover,
+#matcha:checked ~ .menu-nav label[for="matcha"]:hover,
+#seasalt:checked ~ .menu-nav label[for="seasalt"]:hover,
+#frappuccino:checked ~ .menu-nav label[for="frappuccino"]:hover {
+    background: #b17a25;
+    color: #fffde0;
+}
+
+.menu-nav label:active {
+    transform: translateY(0) scale(0.97);
+}
+
+/* Visible keyboard focus ring */
+.menu-nav label:focus-visible {
+    outline: 3px solid #f2d2a0;
+    outline-offset: 3px;
 }
 
 /* Outer window: hides the other sections */
 .menu-window {
-    width: 67%;
-    max-width: 1100px;
-    min-height: 400px;
+    width: 100%;
+    max-width: 920px;
+    min-height: 420px;
     margin: 0 auto;
-    padding: 25px 20px 20px;
+    padding: 30px 28px 26px;
     overflow: hidden;
     border: 2px solid #f2d2a0;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(242, 210, 160, 0.2)), #42230694 ; 
@@ -534,14 +566,32 @@ MENU
 .menu-section {
     flex: 0 0 11.111111%;
     box-sizing: border-box;
-    padding: 20px 40px;
+    padding: 8px 36px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .menu-section h2 {
     text-align: center;
     color: #b17a25;
-    font-size: 48px;
+    font-family: "Abhaya Libre", serif;
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1.05;
     margin-top: 0;
+    margin-bottom: 6px;
+}
+
+/* Gold accent rule under each category title (echoes gallery/about) */
+.menu-section h2::after {
+    content: "";
+    display: block;
+    width: 72px;
+    height: 3px;
+    background: #b17a25;
+    border-radius: 2px;
+    margin: 12px auto 0;
 }
 
 /* ===== Menu item lists (per-category pricing) ===== */
@@ -552,11 +602,13 @@ MENU
     flex-wrap: wrap;
     justify-content: center;
     gap: 14px;
-    margin: 0 0 24px 0;
+    margin: 20px 0 26px 0;
 }
 
 /* A single size + price pill */
 .price-tag {
+    display: inline-flex;
+    align-items: center;
     font-family: "Lexend Exa", sans-serif;
     font-size: 15px;
     font-weight: 700;
@@ -564,22 +616,28 @@ MENU
     color: #FEFFDE;
     background: #88520d;
     padding: 8px 20px;
-    border-radius: 24px;
+    border-radius: 999px;
+    border: 1px solid rgba(242, 210, 160, 0.4);
 }
 
 .price-tag .pt-size {
-    opacity: 0.8;
-    margin-right: 8px;
+    opacity: 0.85;
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
 }
 
 .price-tag .pt-price {
     font-weight: 800;
+    color: #f2d2a0;
 }
 
 /* Centered list of drink names — flows into extra columns when tall */
 .menu-names {
-    columns: 2 260px;        /* up to 2 columns, each ~260px min; collapses to 1 when few items */
-    column-gap: 40px;
+    columns: 2 240px;        /* up to 2 columns, each ~240px min; collapses to 1 when few items */
+    column-gap: 56px;
+    width: 100%;
     max-width: 760px;
     margin: 0 auto;
     text-align: center;
@@ -587,15 +645,24 @@ MENU
 
 .menu-names .m-name {
     font-family: "Abhaya Libre", serif;
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 700;
     color: #f2d2a0;
-    margin: 0 0 18px 0;
+    margin: 0 0 16px 0;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(242, 210, 160, 0.18);
     break-inside: avoid;     /* don't split a name across columns */
+    transition: color 0.2s ease;
+}
+
+.menu-names .m-name:hover {
+    color: #FEFFDE;
 }
 
 .menu-names .m-name:last-child {
     margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
 }
 
 /* Matcha two-column groups keep their lists single-column */
@@ -664,6 +731,20 @@ MENU
 
 #frappuccino:checked ~ .menu-window .menu-track {
     transform: translateX(-88.88889%);
+}
+
+/* Respect reduced-motion: snap between categories instead of sliding */
+@media (prefers-reduced-motion: reduce) {
+    .menu-track {
+        transition: none;
+    }
+    .menu-nav label {
+        transition: none;
+    }
+    .menu-nav label:hover,
+    .menu-nav label:active {
+        transform: none;
+    }
 }
 /* 
 =====================
@@ -1665,88 +1746,88 @@ ABOUT
     /* --- Menu section --- */
     .menutitle h1:first-child { font-size: 40px; padding-right: 0; }
     .menutitle h1:last-child  { font-size: 34px; padding-left: 0; }
+    .menu-intro { font-size: 12.5px; letter-spacing: 0.5px; }
 
-.menu-nav {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px;
-    width: 100%;
-    max-width: 420px;
-    margin: 0 auto 25px;
-}
+    /* Horizontally scrollable, touch-friendly tab strip */
+    .menu-nav {
+        max-width: 100%;
+        margin: 0 -18px 24px;   /* bleed to screen edges so pills can scroll fully */
+        -webkit-overflow-scrolling: touch;
+    }
 
-.menu-nav label {
-    grid-column: auto;
-    width: 100%;
-    min-width: 0;
-    min-height: 58px;
-    padding: 8px 5px;
-    font-size: 13px;
-    box-sizing: border-box;
+    .menu-nav-track {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        scroll-snap-type: x proximity;
+        gap: 10px;
+        padding: 4px 18px 10px;
+        scrollbar-width: none;
+    }
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+    .menu-nav-track::-webkit-scrollbar {
+        display: none;
+    }
 
-/* Reset the desktop positioning of the sixth button */
-.menu-nav label:nth-of-type(6) {
-    grid-column: auto;
-}
+    .menu-nav label {
+        scroll-snap-align: center;
+        min-height: 42px;
+        padding: 10px 18px;
+        font-size: 13px;
+    }
 
-/* Center the ninth button */
-.menu-nav label:nth-of-type(9) {
-    grid-column: 1 / -1;
-    justify-self: center;
-    width: calc(50% - 4px);
-}
+    .menu-window {
+        width: 100%;
+        max-width: none;
+        padding: 20px 12px 18px;
+    }
 
-.menu-window {
-    width: 100%;
-    max-width: none;
-    padding: 18px 8px;
-}
+    .menu-section {
+        padding: 6px 10px 16px;
+    }
 
-.menu-section {
-    padding: 16px 8px;
-}
+    .menu-section h2 {
+        font-size: 30px;
+    }
 
-.menu-section h2 {
-    font-size: 30px;
-}
+    .menu-names {
+        columns: 1;
+        column-gap: 0;
+        max-width: 100%;
+    }
 
-.menu-names {
-    columns: 1;
-    column-gap: 0;
-    max-width: 100%;
-}
+    .menu-names .m-name {
+        font-size: 23px;
+        line-height: 1.3;
+        overflow-wrap: break-word;
+        margin-bottom: 14px;
+        padding-bottom: 12px;
+    }
 
-.menu-names .m-name {
-    font-size: 24px;
-    line-height: 1.3;
-    overflow-wrap: break-word;
-}
+    .menu-prices {
+        gap: 8px;
+    }
 
-.menu-prices {
-    gap: 8px;
-}
+    .price-tag {
+        font-size: 12px;
+        padding: 7px 14px;
+    }
 
-.price-tag {
-    font-size: 12px;
-    padding: 7px 10px;
-}
+    .price-tag .pt-size {
+        font-size: 11px;
+        margin-right: 7px;
+    }
 
-.menu-twocol {
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-}
+    .menu-twocol {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
 
-.menu-col {
-    width: 100%;
-    min-width: 0;
-}
+    .menu-col {
+        width: 100%;
+        min-width: 0;
+    }
 
     /* --- Section paddings + big titles --- */
     .bestpage,
@@ -1772,20 +1853,20 @@ ABOUT
     .visit-headline { font-size: 34px; }
 
     .menu-nav label {
-    font-size: 11px;
-    padding: 7px 3px;
-}
+        font-size: 12px;
+        padding: 9px 16px;
+    }
 
-.menu-section h2 {
-    font-size: 25px;
-}
+    .menu-section h2 {
+        font-size: 26px;
+    }
 
-.menu-names .m-name {
-    font-size: 21px;
-}
+    .menu-names .m-name {
+        font-size: 21px;
+    }
 
-.price-tag {
-    font-size: 10px;
-    padding: 6px 8px;
-}
+    .price-tag {
+        font-size: 11px;
+        padding: 6px 12px;
+    }
 }
