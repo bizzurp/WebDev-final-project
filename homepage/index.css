@@ -515,7 +515,7 @@ MENU
     padding: 25px 20px 20px;
     overflow: hidden;
     border: 2px solid #f2d2a0;
-    background: #42230694;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(242, 210, 160, 0.2)), #42230694 ; 
     color: #f2d2a0;
     box-sizing: border-box;
     backdrop-filter: blur(5px);
@@ -1666,18 +1666,87 @@ ABOUT
     .menutitle h1:first-child { font-size: 40px; padding-right: 0; }
     .menutitle h1:last-child  { font-size: 34px; padding-left: 0; }
 
-    .menu-nav {
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-    .menu-nav label {
-        padding: 8px 16px;
-        font-size: 13px;
-    }
+.menu-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto 25px;
+}
 
-    .menu-section { padding: 16px; }
-    .menu-section h2 { font-size: 34px; }
-    .menu-names { columns: 1; }
+.menu-nav label {
+    grid-column: auto;
+    width: 100%;
+    min-width: 0;
+    min-height: 58px;
+    padding: 8px 5px;
+    font-size: 13px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Reset the desktop positioning of the sixth button */
+.menu-nav label:nth-of-type(6) {
+    grid-column: auto;
+}
+
+/* Center the ninth button */
+.menu-nav label:nth-of-type(9) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 4px);
+}
+
+.menu-window {
+    width: 100%;
+    max-width: none;
+    padding: 18px 8px;
+}
+
+.menu-section {
+    padding: 16px 8px;
+}
+
+.menu-section h2 {
+    font-size: 30px;
+}
+
+.menu-names {
+    columns: 1;
+    column-gap: 0;
+    max-width: 100%;
+}
+
+.menu-names .m-name {
+    font-size: 24px;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.menu-prices {
+    gap: 8px;
+}
+
+.price-tag {
+    font-size: 12px;
+    padding: 7px 10px;
+}
+
+.menu-twocol {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu-col {
+    width: 100%;
+    min-width: 0;
+}
 
     /* --- Section paddings + big titles --- */
     .bestpage,
@@ -1694,9 +1763,29 @@ ABOUT
     .about-script { font-size: 34px; }
 }
 
+
+
 @media (max-width: 480px) {
     .home-headline { font-size: 38px; }
     .menutitle h1:first-child { font-size: 32px; }
     .menutitle h1:last-child  { font-size: 28px; }
     .visit-headline { font-size: 34px; }
+
+    .menu-nav label {
+    font-size: 11px;
+    padding: 7px 3px;
+}
+
+.menu-section h2 {
+    font-size: 25px;
+}
+
+.menu-names .m-name {
+    font-size: 21px;
+}
+
+.price-tag {
+    font-size: 10px;
+    padding: 6px 8px;
+}
 }
