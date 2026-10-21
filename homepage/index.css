@@ -411,7 +411,7 @@ MENU
 }
 
 /* First line */
-.menutitle h1:first-child {
+.menutitle h1:first-of-type {
     font-family: "Abhaya Libre", serif;
     font-size: 64px;
     font-weight: 800;
@@ -419,7 +419,7 @@ MENU
 }
 
 /* Second line */
-.menutitle h1:last-child {
+.menutitle h1:last-of-type {
     font-family: "Aguafina Script", cursive;
     font-size: 58px;
     font-weight: 400;
@@ -1744,8 +1744,8 @@ ABOUT
     }
 
     /* --- Menu section --- */
-    .menutitle h1:first-child { font-size: 40px; padding-right: 0; }
-    .menutitle h1:last-child  { font-size: 34px; padding-left: 0; }
+    .menutitle h1:first-of-type { font-size: 40px; padding-right: 0; }
+    .menutitle h1:last-of-type  { font-size: 34px; padding-left: 0; }
     .menu-intro { font-size: 12.5px; letter-spacing: 0.5px; }
 
     /* Horizontally scrollable, touch-friendly tab strip */
@@ -1848,8 +1848,8 @@ ABOUT
 
 @media (max-width: 480px) {
     .home-headline { font-size: 38px; }
-    .menutitle h1:first-child { font-size: 32px; }
-    .menutitle h1:last-child  { font-size: 28px; }
+    .menutitle h1:first-of-type { font-size: 32px; }
+    .menutitle h1:last-of-type  { font-size: 28px; }
     .visit-headline { font-size: 34px; }
 
     .menu-nav label {
