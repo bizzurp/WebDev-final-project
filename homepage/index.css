@@ -397,16 +397,16 @@ MENU
 */
 
 .menupage {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url(assets/images/IMG_1199.JPG);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url(assets/images/IMG_1199.JPG);
     
     width: 100%;
-    min-height: 800px; 
+    min-height: 600px; 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
+    
     background-color: #402203c4;
-    padding: 60px 4% 50px;
+    padding: 20px 4% 50px;
     box-sizing: border-box;
 }
 
@@ -449,24 +449,36 @@ MENU
 
 /* Keep buttons at the top */
 .menu-nav {
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+    gap: 12px 16px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 25px;
 }
 
+.menu-nav label:nth-of-type(6) {
+    grid-column: 2 / span 2;
+}   
+
 .menu-nav label {
+    grid-column: span 2;
+    min-height: 35px;
+    padding: 10px;
+    box-sizing: border-box;
+
     background: #fffde0;
     color: #422306;
-    padding: 10px 24px;
-    border-radius: 30px;
+    
+    border-radius: 15px;
     font-weight: bold;
     cursor: pointer;
-    text-align: center;
+
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    
     transition: 0.3s ease;
 }
 
@@ -496,18 +508,19 @@ MENU
 
 /* Outer window: hides the other sections */
 .menu-window {
-    width: 60%;
+    width: 67%;
     max-width: 1100px;
     min-height: 400px;
     margin: 0 auto;
-    padding: 25px 40px 40px;
+    padding: 25px 20px 20px;
     overflow: hidden;
-    border: 4px solid #88520d;
+    border: 2px solid #f2d2a0;
     background: #42230694;
     color: #f2d2a0;
     box-sizing: border-box;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+    border-radius: 30px;
 }
 
 /* Panels */
