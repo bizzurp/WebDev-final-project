@@ -1750,12 +1750,60 @@ ABOUT
 
     /* Horizontally scrollable, touch-friendly tab strip */
     .menu-nav {
+        position: relative;
         max-width: 100%;
-        margin: 0 -18px 24px;   /* bleed to screen edges so pills can scroll fully */
+        margin: 0 0px 24px;
         -webkit-overflow-scrolling: touch;
     }
 
+    /* Fade at the left and right edges */
+    .menu-nav::before,
+    .menu-nav::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 28px;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    .menu-nav::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 28px;
+        z-index: 2;
+        pointer-events: none;
+        background: linear-gradient(
+        to right,
+        rgba(35, 20, 8, 0.65),
+        transparent
+        );
+    }
+
+    /* Right-side gradient */
+    .menu-nav::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 28px;
+        z-index: 2;
+        pointer-events: none;
+        background: linear-gradient(
+        to left,
+        rgba(35, 20, 8, 0.65),
+        transparent
+        );
+    }
+    }
+
     .menu-nav-track {
+        position: relative;
         flex-wrap: nowrap;
         justify-content: flex-start;
         overflow-x: auto;
